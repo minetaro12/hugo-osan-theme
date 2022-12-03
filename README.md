@@ -23,5 +23,16 @@ $ cp themes/hugo-osan-theme/archetypes/default.md archetypes/default.md
 $ hugo new posts/hello.md
 ```
 
+## アーカイブの作成
+
+`content/archives.md`
+
+```
+---
+title: "Archives"
+layout: "archive"
+---
+```
+
 ## Thanks
 - https://github.com/feathericons/feather
