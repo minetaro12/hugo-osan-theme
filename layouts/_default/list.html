@@ -1,5 +1,9 @@
 {{ define "title" }}
-  {{ .Title }} - {{ .Site.Title }}
+  {{ if .IsHome }}
+    {{ .Title }}
+  {{ else }}
+    {{ .Title }} - {{ .Site.Title }}
+  {{ end }}
 {{ end }}
 
 {{ define "main" }}
