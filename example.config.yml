@@ -24,6 +24,7 @@ params:
   showsource: true
   contenturl: https://github.com/yourname/site-repo/tree/master/content/
   description: Hello
+  favicon: #favicon
   image: #ogp image
 
 markup:
