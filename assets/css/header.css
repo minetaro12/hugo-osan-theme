@@ -9,6 +9,7 @@ header {
 header > nav {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .site-logo {
@@ -18,10 +19,10 @@ header > nav {
   white-space: nowrap;
 }
 
-.menu-item {
+/* .menu-item {
   padding: 0.15rem;
-}
+} */
 
 .menu-item * {
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
