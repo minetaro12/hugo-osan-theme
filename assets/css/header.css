@@ -1,0 +1,27 @@
+header {
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--br-color);
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+header > nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.site-logo {
+  flex: 1;
+  font-size: x-large;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.menu-item {
+  padding: 0.15rem;
+}
+
+.menu-item * {
+  margin-left: 0.5rem;
+}

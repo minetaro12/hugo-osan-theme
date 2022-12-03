@@ -1,0 +1,15 @@
+.post-content > table {
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  word-break: keep-all;
+}
+
+.post-content > table > thead > tr > th, .post-content > table > tbody > tr > td {
+  border: 1px solid var(--br-color);
+  padding: 10px;
+}
+
+.post-content > table > thead > tr > th {
+  background-color: #98989837;
+}

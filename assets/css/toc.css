@@ -1,0 +1,20 @@
+.toc > details {
+  border-radius: 5px;
+  border: 1px solid var(--fg-color);
+  cursor: zoom-in;
+  margin: 5px;
+  padding: 10px;
+}
+
+.toc > details[open] {
+  cursor: zoom-out;
+  padding: 10px;
+}
+
+.toc > details[open]{
+  cursor: zoom-out;
+}
+
+nav#TableOfContents {
+  line-height: 1.5;
+}

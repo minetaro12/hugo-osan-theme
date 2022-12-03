@@ -1,0 +1,11 @@
+{{ define "title" }}
+  {{ .Title }} - {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+  {{ if eq .Title "Tags" }}
+    {{ partial "list-tags" . }}
+  {{ else }}
+    {{ partial "list-posts" . }}
+  {{ end }}
+{{ end }}

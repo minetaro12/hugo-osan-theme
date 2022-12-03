@@ -1,0 +1,32 @@
+baseURL: http://example.org/
+languageCode: ja-jp
+title: My New Site
+theme: hugo-osan-theme
+copyright: "&copy; 2022 yourname"
+
+menu:
+  header:
+    - name: Archives
+      weight: 1
+      url: /archives
+
+    - name: Tags
+      weight: 2
+      url: /tags
+
+    - name: GitHub
+      weight: 3
+      url: https://github.com/
+      params:
+        newtab: true
+
+params:
+  showsource: true
+  contenturl: https://github.com/yourname/site-repo/tree/master/content/
+  description: Hello
+  image: #ogp image
+
+markup:
+  highlight:
+    guessSyntax: true
+    style: monokai #see https://xyproto.github.io/splash/docs/all.html

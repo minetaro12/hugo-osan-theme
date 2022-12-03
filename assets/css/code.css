@@ -1,0 +1,14 @@
+.post-content > *:not(.highlight) code {
+  background-color: #272822;
+  color: #f8f8f2;
+  font-size: 0.9rem;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.highlight > pre {
+  border-radius: 5px;
+  font-size: 1rem;
+  overflow: auto;
+  padding: 10px;
+}

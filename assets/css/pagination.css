@@ -1,0 +1,8 @@
+.pagination {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.page-next {
+  margin-inline-start: auto;
+}

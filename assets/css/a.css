@@ -1,0 +1,9 @@
+a {
+  color: var(--a-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--a-hover-color);
+  border-bottom: solid 1px;
+}
