@@ -3,6 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
+{{ partial "breadcrumb" . }}
   <h2>{{ .Title }}</h2>
   <ul class="list-post">
     {{ range .Site.RegularPages.GroupByDate "2006-01" }}
