@@ -1,0 +1,2 @@
+{{ $JS := resources.Match "js/*.js" | resources.Concat "js/script.js" | resources.Minify }}
+<script src="{{ $JS.RelPermalink }}"></script>
