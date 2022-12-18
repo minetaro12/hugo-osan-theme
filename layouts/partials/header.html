@@ -5,13 +5,20 @@
     </a>
   </div>
   <div class="menu-item">
-    {{ range .Site.Menus.header }}
+    <svg id="theme-button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    <span id="menu-button">Menu</span>
+  </div>
+</nav>
+<div class="popup-menu hide">
+  <ul>
+  {{ range .Site.Menus.header }}
+    <li>
       {{ if eq .Params.newtab true }}
         <a href="{{ .URL }}" target="_blank" class="no-decoration" rel="noopener noreferrer">{{ .Name | safeHTML}}</a>
       {{ else }}
         <a href="{{ .URL }}" class="no-decoration">{{ .Name | safeHTML }}</a>
       {{ end }}
-    {{ end }}
-    <svg id="theme-button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-  </div>
-</nav>
+    </li>
+  {{ end }}
+  </ul>
+</div>

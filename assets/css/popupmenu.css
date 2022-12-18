@@ -1,0 +1,21 @@
+.popup-menu {
+  background-color: var(--bg-color);
+  border: solid 1px var(--br-color);
+  color: var(--fg-color);
+  position: fixed;
+  right: 1rem;
+  padding: 0 1rem;
+}
+
+.popup-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.popup-menu ul li {
+  margin-bottom: 0.5rem;
+}
+
+#menu-button {
+  cursor: pointer;
+}
