@@ -1,0 +1,5 @@
+div#search {
+  --pagefind-ui-background: var(--bg-color);
+  --pagefind-ui-text: var(--fg-color);
+  margin: 1rem 0;
+}

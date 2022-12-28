@@ -34,5 +34,16 @@ layout: "archive"
 ---
 ```
 
+## 検索ページの作成(pagefindが必要です)
+
+`content/search.md`
+
+```
+---
+title: "Search"
+layout: "search"
+---
+```
+
 ## Thanks
 - https://github.com/feathericons/feather

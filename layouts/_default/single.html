@@ -8,7 +8,7 @@
 
 {{ define "main" }}
   {{ partial "breadcrumb" . }}
-  <h1 class="post-title">{{ .Title }}</h1>
+  <h1 class="post-title" data-pagefind-body>{{ .Title }}</h1>
   <div class="post-meta">
     {{ if .Date }}
       <span>
@@ -32,7 +32,7 @@
     </div>
   </div>
   {{ partial "toc" . }}
-  <article class="post-content">
+  <article class="post-content" data-pagefind-body>
     {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" "${1}&nbsp;<a class=\"headline-hash\" href=\"#${2}\">#</a> ${3}" | safeHTML }}
   </article>
   {{ if .Params.comments }}
