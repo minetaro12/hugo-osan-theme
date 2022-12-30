@@ -35,6 +35,9 @@
   <article class="post-content" data-pagefind-body>
     {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" "${1}&nbsp;<a class=\"headline-hash\" href=\"#${2}\">#</a> ${3}" | safeHTML }}
   </article>
+  {{ if in .Permalink "posts" }}
+    {{ partial "post-nav" . }}
+  {{ end }}
   {{ if .Params.comments }}
     {{ partial "comments" . }}
   {{ end }}
