@@ -1,0 +1,5 @@
+<p>
+  <a class="spotlight no-decoration" href="{{ .Destination | safeURL }}" data-title="false">
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+  </a>
+</p>

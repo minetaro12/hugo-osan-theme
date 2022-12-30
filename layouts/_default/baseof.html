@@ -11,16 +11,18 @@
     {{ end }}
   </head>
   <body>
-    <header>
-      {{ partial "header" . }}
-    </header>
-    <div class="content">
-      {{ block "main" . }}
-      {{ end }}
-    </div>
-    <footer>
-      {{ partial "footer" . }}
-    </footer>
-  </body>
-  {{ partial "js" . }}
+    <div id="main">
+      <header>
+        {{ partial "header" . }}
+      </header>
+      <div class="content">
+        {{ block "main" . }}
+        {{ end }}
+      </div>
+      <footer>
+        {{ partial "footer" . }}
+      </footer>
+    </body>
+    {{ partial "js" . }}
+  </div>
 </html>
