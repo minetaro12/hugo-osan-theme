@@ -26,6 +26,7 @@ params:
   description: Hello
   favicon: #favicon
   image: #ogp image
+  postnav: true
 
 markup:
   highlight:
