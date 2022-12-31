@@ -1,5 +1,6 @@
 .post-title {
-  margin: 0 0 0.5rem;
+  font-size: x-large;
+  font-weight: 600;
 }
 
 .post-meta {
@@ -21,4 +22,12 @@
 li ul {
   margin: 0 0 0 1em;
   padding: 0;
+}
+
+.headline-hash {
+  visibility: hidden;
+}
+
+:has(> .headline-hash):hover .headline-hash {
+  visibility: visible;
 }
