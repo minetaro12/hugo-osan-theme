@@ -1,7 +1,5 @@
 {{ $contentImage := path.Join "/content" .Page.RelPermalink (.Destination | safeURL) }}
 {{ $imgconf := imageConfig $contentImage }}
-<div class="gallery">
-  <a class="no-decoration pswp-child" href="{{ .Destination | safeURL }}" {{ with $imgconf }} data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}" {{ end }}>
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }}/>
-  </a>
-</div>
+<a class="no-decoration pswp-child" href="{{ .Destination | safeURL }}" {{ with $imgconf }} data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}" {{ end }}>
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }}/>
+</a>
