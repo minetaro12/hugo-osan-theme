@@ -1,0 +1,11 @@
+<p>
+  {{ $contentImage := path.Join "/content" .Page.RelPermalink (.Get "src" | safeURL) }}
+  {{ if os.FileExists $contentImage }}
+    {{ $imgconf := imageConfig $contentImage }}
+    <a class="no-decoration pswp-child" href="{{ .Get "src" | safeURL }}" {{ with $imgconf }} data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}" {{ end }}>
+      <img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt"}} alt="{{ . }}" {{ end }} {{ with .Get "width" }} width="{{ . }}" {{ end }} {{ with .Get "height" }} height="{{ . }}" {{ end }}/>
+    </a>
+  {{ else }}
+    <img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt"}} alt="{{ . }}" {{ end }} {{ with .Get "width" }} width="{{ . }}" {{ end }} {{ with .Get "height" }} height="{{ . }}" {{ end }}/>
+  {{ end }}
+</p>
