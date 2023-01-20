@@ -25,5 +25,5 @@
 
 .breadcrumb li:not(:last-child)::after {
   content: '>';
-  padding: 0 0 0 0.2rem;
+  padding: 0 0.2rem;
 }
