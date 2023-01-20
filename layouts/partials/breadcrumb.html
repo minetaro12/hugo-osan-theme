@@ -1,18 +1,14 @@
 <ol class="breadcrumb">
-  {{- template "breadcrumb" (dict "node" . "start" .) }}
+  <ul>
+    {{- range .Ancestors.Reverse }}
+      {{ if eq .Title .Site.Title }}
+        <li><a href="{{ .Permalink }}">Home</a></li>
+      {{ else }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    {{- end }}
+    <li>
+      {{ .Title }}
+    </li>
+  </ul>
 </ol>
-{{- define "breadcrumb" }}
-  {{- if .node.Parent }}
-    {{- template "breadcrumb" (dict "node" .node.Parent "start" .start) }}
-  {{- else if not .node.IsHome }}
-    {{- template "breadcrumb" (dict "node" .node.Site.Home "start" .start) }}
-  {{- end }}
-
-  {{- if eq .node .start }}
-    <li>{{ .node.LinkTitle }}
-  {{- else if eq .node.LinkTitle .node.Site.Title }}
-    <li><a href="{{ .node.Permalink }}">Home</a>
-  {{- else }}
-    <li><a href="{{ .node.Permalink }}">{{ .node.LinkTitle }}</a>
-  {{- end }}
-{{- end }}

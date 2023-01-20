@@ -8,7 +8,7 @@ description = "0sn.netのHugoテーマ"
 homepage = "http://0sn.net/"
 #tags = []
 #features = []
-min_version = "0.41.0"
+min_version = "0.109.0"
 
 [author]
   name = "minetaro12"
