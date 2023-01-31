@@ -8,6 +8,7 @@ header {
 }
 
 header > nav {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -18,10 +19,6 @@ header > nav {
   font-weight: bold;
   white-space: nowrap;
 }
-
-/* .menu-item {
-  padding: 0.15rem;
-} */
 
 .menu-item * {
   margin-right: 0.5rem;

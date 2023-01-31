@@ -20,17 +20,11 @@
 }
 
 body {
-  /* line-height: 1.6; */
   background-color: var(--bg-color);
   color: var(--fg-color);
-  /* display: flex; */
-  /* flex-flow: column; */
   font-family: system-ui,sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0 auto;
-  /* max-width: 750px; */
-  /* min-height: 100svh; */
-  /* padding: 0 1rem 0 1rem; */
   word-break: break-word;
 }
 
@@ -38,7 +32,6 @@ body {
   display: flex;
   flex-flow: column;
   min-height: 100svh;
-  padding: 0 1rem;
 }
 
 .center {
@@ -46,9 +39,11 @@ body {
 }
 
 .content {
+  box-sizing: border-box;
   flex: 1;
   margin: 0 auto;
   max-width: 900px;
+  padding: 0 1rem;
   width: 100%;
 }
 
