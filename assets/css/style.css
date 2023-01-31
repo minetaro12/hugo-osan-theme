@@ -1,10 +1,18 @@
 :root {
-  --a-color: #174dba;
-  --a-hover-color: #4970be;
-  --bg-color: white;
-  --fg-color: black;
-  --br-color: #919191;
+  --a-color: var(--a-l-color);
+  --a-hover-color: var(--a-hover-l-color);
+  --bg-color: var(--bg-l-color);
+  --fg-color: var(--fg-l-color);
+  --br-color: var(--br-l-color);
 
+  /* light mode */
+  --a-l-color: #174dba;
+  --a-hover-l-color: #4970be;
+  --bg-l-color: white;
+  --fg-l-color: black;
+  --br-l-color: #919191;
+
+  /* dark mode */
   --a-d-color: #94b8ff;
   --a-hover-d-color: #dae6ff;
   --bg-d-color: #171717;
