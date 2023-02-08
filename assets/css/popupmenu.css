@@ -15,15 +15,3 @@
 #popup-menu ul li {
   margin-bottom: 0.5rem;
 }
-
-#menu-button {
-  background-color: var(--bg-color);
-  border: solid 2px var(--br-color);
-  cursor: pointer;
-  padding: 5px 10px;
-}
-
-#menu-button:hover {
-  filter: invert(100%);
-  transition: 0.5s;
-}
