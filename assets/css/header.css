@@ -12,6 +12,7 @@ header > nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  user-select: none;
 }
 
 .site-logo {
