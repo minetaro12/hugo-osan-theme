@@ -17,5 +17,7 @@
 }
 
 #menu-button {
+  border: solid 2px var(--br-color);
   cursor: pointer;
+  padding: 5px 10px;
 }
