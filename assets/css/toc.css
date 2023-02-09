@@ -1,9 +1,14 @@
+.toc {
+  margin: 1rem 0;
+}
+
 .toc > details {
   border-radius: 5px;
   border: 1px solid var(--fg-color);
   cursor: zoom-in;
   margin: 5px;
   padding: 10px;
+  user-select: none;
 }
 
 .toc > details[open] {
