@@ -6,10 +6,15 @@
 .list-item {
   border-bottom: 1px dashed rgb(141, 141, 141);
   margin-bottom: 10px;
+  padding-bottom: 0.5rem;
 }
 
-.list-item time {
+.list-meta {
   font-size: small;
+}
+
+.list-meta > * {
+  margin-right: 2px;
 }
 
 .list-tag {
