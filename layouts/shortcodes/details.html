@@ -1,0 +1,10 @@
+{{ $summary := .Get 0 }}
+
+<div class="details">
+  <details>
+    <summary>{{ $summary }}</summary>
+    <div class="details-content">
+      {{ .Inner | .Page.RenderString }}
+    </div>
+  </details>
+</div>
