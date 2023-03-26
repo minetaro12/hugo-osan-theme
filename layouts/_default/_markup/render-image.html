@@ -1,9 +1,8 @@
-{{ $contentImage := path.Join "/content" .Page.RelPermalink (.Destination | safeURL) }}
-{{ if os.FileExists $contentImage }}
-  {{ $imgconf := imageConfig $contentImage }}
-  <a class="no-decoration pswp-child" href="{{ .Destination | safeURL }}" {{ with $imgconf }} data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}" {{ end }}>
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }}/>
+{{ $text := .Text }}
+{{ with .Page.Resources.GetMatch (.Destination | safeURL) }}
+  <a class="no-decoration pswp-child" href="{{ .RelPermalink | safeURL }}" data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}">
+    <img src="{{ .RelPermalink | safeURL }}" alt="{{ $text }}"/>
   </a>
 {{ else }}
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }}/>
+  <img src="{{ .Destination | safeURL }}" alt="{{ $text }}"/>
 {{ end }}
