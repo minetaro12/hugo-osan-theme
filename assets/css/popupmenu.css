@@ -15,3 +15,10 @@
 #popup-menu ul li {
   margin-bottom: 0.5rem;
 }
+
+#popup-menu .feather {
+  height: 0.8rem;
+  margin-left: 5px;
+  vertical-align: 0;
+  width: 0.8rem;
+}
