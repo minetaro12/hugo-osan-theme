@@ -14,10 +14,6 @@
   display: none;
 }
 
-.breadcrumb > ul {
-  padding: 0;
-}
-
 .breadcrumb li {
   display: inline;
   list-style: none;
