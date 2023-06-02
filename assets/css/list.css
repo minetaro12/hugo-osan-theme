@@ -5,8 +5,19 @@
 
 .list-item {
   border-bottom: 1px dashed rgb(141, 141, 141);
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
   padding-bottom: 0.5rem;
+}
+
+.list-item > a {
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.list-item > a:hover {
+  filter: contrast(0.5);
 }
 
 .list-meta {

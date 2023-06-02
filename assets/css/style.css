@@ -1,17 +1,17 @@
 html {
   --a-color: #174dba;
-  --a-hover-color: #4970be;
   --bg-color: white;
   --fg-color: black;
   --br-color: #919191;
+  scroll-padding-top: 70px;
 }
 
 /* Dark mode */
 html.Dark {
   --a-color: #94b8ff;
-  --a-hover-color: #dae6ff;
   --bg-color: #171717;
   --fg-color: #cccccc;
+  scroll-padding-top: 70px;
 }
 
 body {
@@ -50,6 +50,7 @@ body {
 
 .no-decoration:hover {
   color: var(--fg-color);
+  filter: unset;
   text-decoration: none;
   border-bottom: none;
 }

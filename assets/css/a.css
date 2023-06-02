@@ -4,6 +4,6 @@ a {
 }
 
 a:hover {
-  color: var(--a-hover-color);
+  filter: brightness(1.7);
   border-bottom: solid 1px;
 }
