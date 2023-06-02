@@ -1,13 +1,19 @@
-const togglepopup = document.querySelector("#menu-button")
-const popup = document.querySelector("#popup-menu")
-const main = document.querySelector("#main")
+(function(global) {
+  "use strict";
 
-togglepopup.addEventListener("click", () => {
-  popup.classList.toggle("hide")
-})
+  global.document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = global.document.getElementById("menu-button");
+    const popupMenu = global.document.getElementById("popup-menu");
+    const main = global.document.getElementById("main");
 
-main.addEventListener("click", (event) => {
-  if(event.target.closest("#popup-menu") === null && event.target.closest("#menu-button") === null) {
-    popup.classList.add("hide")
-  }
-})
+    menuButton.addEventListener("click", () => {
+      popupMenu.classList.toggle("hide");
+    });
+
+    main.addEventListener("click", (event) => {
+      if(event.target.closest("#popup-menu") === null && event.target.closest("#menu-button") === null) {
+        popupMenu.classList.add("hide");
+      };
+    });
+  });
+})(globalThis);
