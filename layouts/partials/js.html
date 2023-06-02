@@ -1,2 +1,9 @@
+<script>
+  (function (global) {
+    if (localStorage.getItem("dark")) {
+      global.document.documentElement.classList.add("Dark");
+    }
+  })(globalThis);
+</script>
 {{ $JS := resources.Match "js/*.js" | resources.Concat "js/script.js" | resources.Minify }}
-<script src="{{ $JS.RelPermalink }}"></script>
+<script src="{{ $JS.RelPermalink }}" defer></script>

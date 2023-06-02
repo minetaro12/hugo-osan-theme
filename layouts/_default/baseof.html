@@ -9,6 +9,7 @@
     </title>
     {{ block "head" . }}
     {{ end }}
+    {{ partial "js" . }}
   </head>
   <body>
     <div id="main">
@@ -23,6 +24,5 @@
         {{ partial "footer" . }}
       </footer>
     </div>
-    {{ partial "js" . }}
   </body>
 </html>

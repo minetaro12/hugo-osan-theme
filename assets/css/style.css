@@ -1,30 +1,26 @@
-:root {
-  --a-color: var(--a-l-color);
-  --a-hover-color: var(--a-hover-l-color);
-  --bg-color: var(--bg-l-color);
-  --fg-color: var(--fg-l-color);
-  --br-color: var(--br-l-color);
+html {
+  --a-color: #174dba;
+  --a-hover-color: #4970be;
+  --bg-color: white;
+  --fg-color: black;
+  --br-color: #919191;
+}
 
-  /* light mode */
-  --a-l-color: #174dba;
-  --a-hover-l-color: #4970be;
-  --bg-l-color: white;
-  --fg-l-color: black;
-  --br-l-color: #919191;
-
-  /* dark mode */
-  --a-d-color: #94b8ff;
-  --a-hover-d-color: #dae6ff;
-  --bg-d-color: #171717;
-  --fg-d-color: #cccccc;
+/* Dark mode */
+html.Dark {
+  --a-color: #94b8ff;
+  --a-hover-color: #dae6ff;
+  --bg-color: #171717;
+  --fg-color: #cccccc;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--fg-color);
-  font-family: system-ui,sans-serif;
+  font-family: system-ui, sans-serif;
   font-size: 1rem;
   margin: 0 auto;
+  transition: all 0.3s;
   word-break: break-word;
 }
 
