@@ -1,8 +1,10 @@
 {{ $text := .Text }}
-{{ with .Page.Resources.GetMatch (.Destination | safeURL) }}
-  <a class="no-decoration pswp-child" href="{{ .RelPermalink | safeURL }}" data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}">
-    <img src="{{ .RelPermalink | safeURL }}" alt="{{ $text }}"/>
-  </a>
-{{ else }}
-  <img src="{{ .Destination | safeURL }}" alt="{{ $text }}"/>
-{{ end }}
+<a href="{{ .Destination | safeURL }}" target="_blank" rel="noopener noreferrer" class="no-decoration">
+  {{ $original_image := .Page.Resources.GetMatch (.Destination | safeURL) }}
+  {{ if $original_image }}
+    {{ $resized := $original_image.Fit "600x480 q70" }}
+    <img src="{{ $resized.RelPermalink }}" alt="{{ $text }}">
+  {{ else }}
+    <img src="{{ .Destination | safeURL }}" alt="{{ $text }}">
+  {{ end }}
+</a>

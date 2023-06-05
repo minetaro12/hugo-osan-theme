@@ -2,11 +2,13 @@
   {{ $width := .Get "width" }}
   {{ $height := .Get "height" }}
   {{ $alt := .Get "alt" }}
-  {{ with .Page.Resources.GetMatch (.Get "src" | safeURL) }}
-    <a class="no-decoration pswp-child" href="{{ .RelPermalink | safeURL }}" data-pswp-width="{{ .Width }}" data-pswp-height="{{ .Height }}">
-      <img src="{{ .RelPermalink | safeURL }}" {{ with $alt }} alt="{{ . }}" {{ end }} {{ with $width }} width="{{ . }}" {{ end }} {{ with $height }} height="{{ . }}" {{ end }}/>
-    </a>
-  {{ else }}
-    <img src="{{ .Get "src" | safeURL }}" {{ with $alt }} alt="{{ . }}" {{ end }} {{ with $width }} width="{{ . }}" {{ end }} {{ with $height }} height="{{ . }}" {{ end }}/>
-  {{ end }}
+  <a href="{{ .Get "src" }}" target="_blank" rel="noopener noreferrer" class="no-decoration">
+    {{ $original_image := .Page.Resources.GetMatch (.Get "src") }}
+    {{ if $original_image }}
+      {{ $resized := $original_image.Fit "600x480 q70" }}
+      <img src="{{ $resized.RelPermalink }}" {{ with $alt }} alt="{{ . }}" {{ end }} {{ with $width }} width="{{ . }}" {{ end }} {{ with $height }} height="{{ . }}" {{ end }}>
+    {{ else }}
+      <img src="{{ .Get "src" }}" {{ with $alt }} alt="{{ . }}" {{ end }} {{ with $width }} width="{{ . }}" {{ end }} {{ with $height }} height="{{ . }}" {{ end }}>
+    {{ end }}
+  </a>
 </p>
