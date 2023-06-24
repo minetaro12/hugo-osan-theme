@@ -4,6 +4,11 @@
   margin: 2rem 0 1rem;
 }
 
+.post-nav-next {
+  display: flex;
+}
+
 .post-nav-prev {
+  display: flex;
   text-align: right;
 }
