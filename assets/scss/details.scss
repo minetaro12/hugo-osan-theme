@@ -1,0 +1,16 @@
+.details>details {
+  >summary {
+    cursor: zoom-in;
+    user-select: none;
+  }
+
+  &[open]>summary {
+    cursor: zoom-out;
+  }
+}
+
+.details-content {
+  border: 1px solid var(--fg-color);
+  border-radius: 5px;
+  padding: 10px;
+}

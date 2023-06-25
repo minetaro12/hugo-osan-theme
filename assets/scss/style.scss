@@ -11,7 +11,6 @@ html.Dark {
   --a-color: #94b8ff;
   --bg-color: #171717;
   --fg-color: #cccccc;
-  scroll-padding-top: 70px;
 }
 
 body {
@@ -46,13 +45,13 @@ body {
 .no-decoration {
   color: var(--fg-color);
   text-decoration: none;
-}
 
-.no-decoration:hover {
-  color: var(--fg-color);
-  filter: unset;
-  text-decoration: none;
-  border-bottom: none;
+  &:hover {
+    color: var(--fg-color);
+    filter: unset;
+    text-decoration: none;
+    border-bottom: none;
+  }
 }
 
 .hide {

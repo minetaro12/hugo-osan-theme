@@ -5,8 +5,8 @@ div#search {
   --pagefind-ui-border: var(--fg-color);
   --pagefind-ui-border-width: 1px;
   margin: 1rem 0;
-}
 
-div#search a {
-  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
 }

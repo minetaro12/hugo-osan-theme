@@ -6,14 +6,14 @@ header {
   top: 0;
   transition: all 0.3s;
   z-index: 10;
-}
 
-header > nav {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  user-select: none;
+  >nav {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    user-select: none;
+  }
 }
 
 .site-logo {

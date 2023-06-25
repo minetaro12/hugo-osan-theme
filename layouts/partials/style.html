@@ -1,2 +1,2 @@
-{{ $CSS := resources.Match "css/*.css" | resources.Concat "css/style.css" | resources.Minify }}
+{{ $CSS := resources.Match "scss/*.scss" | resources.Concat "css/style.scss" | toCSS | minify }}
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}">

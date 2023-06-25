@@ -1,0 +1,9 @@
+a {
+  color: var(--a-color);
+  text-decoration: none;
+
+  &:hover {
+    filter: brightness(1.7);
+    border-bottom: solid 1px;
+  }
+}

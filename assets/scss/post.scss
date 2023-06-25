@@ -5,21 +5,21 @@
 
 .post-meta {
   font-size: smaller;
-}
 
-.post-meta span {
-  margin-right: 5px;
+  span {
+    margin-right: 5px;
+  }
 }
 
 .post-content {
   line-height: 1.6;
-}
 
-.post-content hr {
-  height: 0;
-  padding: 0;
-  border: 0;
-  border-top: 1px solid var(--br-color);
+  hr {
+    height: 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid var(--br-color);
+  }
 }
 
 li ul {

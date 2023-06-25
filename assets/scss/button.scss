@@ -1,13 +1,15 @@
-#menu-button, #theme-button-light, #theme-button-dark {
+#menu-button,
+#theme-button-light,
+#theme-button-dark {
   background-color: var(--bg-color);
   border: solid 2px var(--br-color);
   cursor: pointer;
   padding: 5px 10px;
-}
 
-#menu-button:hover, #theme-button-light:hover, #theme-button-dark:hover {
-  filter: invert(100%);
-  transition: 0.5s;
+  &:hover {
+    filter: invert(100%);
+    transition: 0.5s;
+  }
 }
 
 #theme-button-light {
