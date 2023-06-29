@@ -15,7 +15,8 @@
     padding-bottom: 10px;
 
     &:hover {
-      filter: contrast(0.5);
+      text-decoration: underline 2px solid;
+      font-weight: 800;
     }
   }
 
