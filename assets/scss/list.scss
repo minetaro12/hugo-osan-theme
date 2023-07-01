@@ -40,6 +40,14 @@
 }
 
 .list-tag {
+  border-radius: 5px;
+  border: 2px solid var(--br-color);
   display: inline-block;
-  margin: 5px;
+  margin: 8px;
+  padding: 5px 10px;
+
+  &:active {
+    transform: scale(.98);
+    transition: .1s;
+  }
 }
