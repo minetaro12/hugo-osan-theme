@@ -16,6 +16,7 @@ html.Dark {
 body {
   background-color: var(--bg-color);
   color: var(--fg-color);
+  cursor: default;
   font-family: system-ui, sans-serif;
   font-size: 1rem;
   margin: 0 auto;
