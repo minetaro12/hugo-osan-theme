@@ -1,3 +1,12 @@
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none
+}
+
 #menu-button,
 #theme-button-light,
 #theme-button-dark {
@@ -7,7 +16,7 @@
   cursor: pointer;
   padding: 5px 10px;
 
-  &:hover {
+  &:hover, &:focus-visible {
     filter: invert(100%);
     transition: 0.5s;
   }
