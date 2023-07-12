@@ -1,6 +1,10 @@
 <script>
   (function (global) {
     if (localStorage.getItem("dark")) {
+      if (localStorage.getItem("dark") == "on") {
+        global.document.documentElement.classList.add("Dark");
+      }
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       global.document.documentElement.classList.add("Dark");
     }
   })(globalThis);
