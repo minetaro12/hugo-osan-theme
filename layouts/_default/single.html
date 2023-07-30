@@ -40,6 +40,10 @@
     {{ end }}
   {{ end }}
   {{ if .Params.comments }}
-    {{ partial "comments" . }}
+    {{ if $.Site.IsServer }}
+      <p>プレビューではコメントが非表示なります</p>
+    {{ else }}
+      {{ partial "comments" . }}
+    {{ end }}
   {{ end }}
 {{ end }}
