@@ -1,8 +1,10 @@
 #popup-menu {
   background-color: var(--bg-color);
   border: solid 1px var(--br-color);
+  border-radius: 5px;
   color: var(--fg-color);
   position: fixed;
+  top: 3rem;
   right: 1rem;
   padding: 0 1rem;
 
