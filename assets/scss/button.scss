@@ -11,10 +11,9 @@ button {
 #theme-button-light,
 #theme-button-dark {
   background-color: var(--bg-color);
-  border: solid 2px var(--br-color);
   border-radius: 5px;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 8px 15px;
 
   &:hover, &:focus-visible {
     filter: invert(100%);
