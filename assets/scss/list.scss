@@ -45,20 +45,27 @@
 }
 
 .list-tag {
-  background-color: var(--bg-color);
-  border-radius: 5px;
-  border: 2px solid var(--br-color);
   display: inline-block;
   margin: 8px;
-  padding: 5px 10px;
 
-  &:hover {
-    filter: invert(100%);
-    transition: .5s;
-  }
+  >a {
+    background-color: var(--bg-color);
+    border: 2px solid var(--br-color);
+    border-radius: 5px;
+    display: block;
+    padding: 5px 10px;
 
-  &:active {
-    transform: scale(.98);
-    transition: .1s;
+    &:hover {
+      // ホバー時にずれるため
+      border: 2px solid var(--br-color);
+
+      filter: invert(100%);
+      transition: .5s;
+    }
+
+    &:active {
+      transform: scale(.98);
+      transition: .1s;
+    }
   }
 }
