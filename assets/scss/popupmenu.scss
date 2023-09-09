@@ -6,15 +6,18 @@
   position: fixed;
   top: 3rem;
   right: 1rem;
-  padding: 0 1rem;
 
-  ul {
-    list-style: none;
-    padding: 0;
-  }
+  a {
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    display: block;
+    padding: 5px;
+    margin: 5px;
 
-  ul li {
-    margin-bottom: 0.5rem;
+    &:hover, &:focus-visible {
+      filter: invert(100%);
+      transition: .5s;
+    }
   }
 
   .feather {
