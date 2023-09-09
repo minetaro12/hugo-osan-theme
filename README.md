@@ -23,7 +23,7 @@ $ cp themes/hugo-osan-theme/archetypes/default.md archetypes/default.md
 $ hugo new posts/hello.md
 ```
 
-## アーカイブの作成
+## アーカイブページの作成
 
 `content/archives.md`
 
