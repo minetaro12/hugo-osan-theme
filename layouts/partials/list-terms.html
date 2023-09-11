@@ -1,9 +1,9 @@
 <ul class="list-post">
   <div>
-    <h1>Tags</h1>
+    <h1>{{ .Title }}</h1>
   </div>
   {{ range .Pages.ByTitle }}
-  <li class="list-tag">
+  <li class="list-term">
     <a href="{{ .Permalink }}" class="no-decoration">&#035;{{ .Title }}</a>
   </li>
   {{ end }}

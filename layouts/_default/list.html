@@ -7,12 +7,9 @@
 {{ end }}
 
 {{ define "main" }}
+  {{/*  ホームの場合はパンくずリストを表示しない */}}
   {{ if eq .IsHome false }}
     {{ partial "breadcrumb" . }}
   {{ end }}
-  {{ if eq .Title "Tags" }}
-    {{ partial "list-tags" . }}
-  {{ else }}
-    {{ partial "list-posts" . }}
-  {{ end }}
+  {{ partial "list-posts" . }}
 {{ end }}

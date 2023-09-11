@@ -1,0 +1,8 @@
+{{ define "title" }}
+  {{ .Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "breadcrumb" . }}
+  {{ partial "list-terms" . }}
+{{ end }}

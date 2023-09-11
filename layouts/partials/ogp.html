@@ -25,6 +25,7 @@
   <meta name="twitter:image" content="{{ .Site.Params.image | absURL }}" />
 {{- end }}
 <meta name="twitter:title" content="{{ .Title }}">
+
 {{- if .Description }}
   <meta name="twitter:description" content="{{ .Description }}" />
 {{- else if .Site.Params.description }}
