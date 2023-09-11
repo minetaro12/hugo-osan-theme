@@ -12,7 +12,7 @@
         {{ range .Pages }}
           {{ if in .Permalink "posts" }}
             <li class="list-item">
-              <a href={{ .Permalink }} aria-label="{{ .Title }}"></a>
+              <a href="{{ .Permalink }}" aria-label="{{ .Title }}"></a>
               <div class="list-title">
                 {{ .Title }}
               </div>
