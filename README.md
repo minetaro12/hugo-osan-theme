@@ -3,7 +3,7 @@
 ## 使い方
 ```
 # サイトの作成
-$ hugo new site -f yml new-site
+$ hugo new site new-site --format yml
 
 $ cd new-site
 
