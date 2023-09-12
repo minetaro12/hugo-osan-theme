@@ -1,7 +1,9 @@
+{{ if eq .IsHome false }}
+<h1>{{ .Title }}</h1>
+{{ end }}
 <ul class="list-post">
   {{ $paginator := 0 }}
   {{ if eq .IsHome false }}
-    <h1>{{ .Title }}</h1>
     {{ $paginator = .Paginator }}
   {{ else }}
     {{ $paginator = .Paginate (where .Site.RegularPages "Type" "posts") }}
