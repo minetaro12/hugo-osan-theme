@@ -1,8 +1,10 @@
 {{ if eq .Params.showToc true }}
-  <div class="toc">
-    <details>
-      <summary>Toc</summary>
-      {{ .TableOfContents }}
+  <div class="mb-4">
+    <details class="border-stone-400 border-2 rounded-md p-2">
+      <summary class="hover:cursor-pointer">Toc</summary>
+      <div class="px-10 py-4">
+        {{ .TableOfContents }}
+      </div>
     </details>
   </div>
 {{ end }}

@@ -7,12 +7,12 @@
     const main = global.document.getElementById("main");
 
     menuButton.addEventListener("click", () => {
-      popupMenu.classList.toggle("hide");
+      popupMenu.classList.toggle("hidden");
     });
 
     main.addEventListener("click", (event) => {
       if(event.target.closest("#popup-menu") === null && event.target.closest("#menu-button") === null) {
-        popupMenu.classList.add("hide");
+        popupMenu.classList.add("hidden");
       };
     });
   });

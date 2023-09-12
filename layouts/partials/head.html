@@ -1,6 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="{{ site.Params.favicon | default "favicon.ico" | absURL }}">
-{{ partial "style" . }}
+{{ $css := resources.Get "css/out.css" }}
+<link rel="stylesheet" href="{{ $css.Permalink }}">
 {{ partial "ogp" . }}
 {{ partial "js" . }}

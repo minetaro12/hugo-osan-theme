@@ -3,11 +3,11 @@
 
   const switchMode = (changeDark) => {
     if (changeDark) {
-      global.document.documentElement.classList.add("Dark");
+      global.document.documentElement.classList.add("dark");
       localStorage.setItem("dark", "on");
       return;
     }
-    global.document.documentElement.classList.remove("Dark");
+    global.document.documentElement.classList.remove("dark");
     localStorage.setItem("dark", "off");
   };
 

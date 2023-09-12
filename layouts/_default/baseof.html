@@ -10,16 +10,16 @@
     {{ block "head" . }}
     {{ end }}
   </head>
-  <body>
-    <div id="main">
-      <header>
+  <body class="dark:bg-zinc-900 dark:text-stone-300">
+    <div id="main" class="flex flex-col h-screen">
+      <header class="bg-white dark:bg-zinc-900 p-4 border-b-[1px] border-stone-400 mb-3 sticky top-0 z-10">
         {{ partial "header" . }}
       </header>
-      <div class="content">
+      <div class="flex-1 mx-auto max-w-[900px] w-full mb-4 px-4">
         {{ block "main" . }}
         {{ end }}
       </div>
-      <footer>
+      <footer class="p-2 border-t-[1px] border-t-stone-400">
         {{ partial "footer" . }}
       </footer>
     </div>

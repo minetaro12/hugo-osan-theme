@@ -4,11 +4,11 @@
 
 {{ define "main" }}
 {{ partial "breadcrumb" . }}
-  <h2>{{ .Title }}</h2>
+  <h1 class="text-3xl font-bold mb-4">{{ .Title }}</h1>
   <ul class="list-post">
     {{ range .Site.RegularPages.GroupByDate "2006-01" }}
       {{ if  not (in .Key "0001") }}
-        <h3>{{ .Key }}</h3>
+        <h3 class="text-lg font-bold mb-2">{{ .Key }}</h3>
         {{ range .Pages }}
           {{ if in .Permalink "posts" }}
             {{ partial "list-item" . }}

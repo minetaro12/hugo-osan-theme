@@ -1,9 +1,8 @@
-<li class="list-item">
-  <a href="{{ .Permalink }}" aria-label="{{ .Title }}"></a>
-  <div class="list-title">{{ .Title }}</div>
-  <div class="list-meta">
+<li class="bg-white dark:bg-zinc-900 relative border-stone-400 border-2 rounded-md mb-2 p-4 active:scale-95 hover:duration-500 hover:invert">
+  <a href="{{ .Permalink }}" aria-label="{{ .Title }}" class="absolute h-full w-full top-0 left-0"></a>
+  <div class="text-xl font-bold">{{ .Title }}</div>
+  <div class="text-sm">
     <span>
-      {{ partial "svg/calendar" . }}
       <time>{{ .Date.Format "2006-01-02" }}</time>
       {{ range (.GetTerms "tags") }}
         &#035;{{ .LinkTitle }}

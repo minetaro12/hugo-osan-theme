@@ -8,30 +8,28 @@
 
 {{ define "main" }}
   {{ partial "breadcrumb" . }}
-  <span class="post-title" data-pagefind-body>{{ .Title }}</span>
-  <div class="post-meta">
+  <span class="text-2xl font-bold" data-pagefind-body>{{ .Title }}</span>
+  <div class="text-sm mb-2">
     {{ if .Date }}
       <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
         <time>{{ .Date.Format "2006-01-02 15:04:05" }}</time>
       </span>
     {{ end }}
     {{ if .Site.Params.showsource }}
       <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg>
-        <a href="{{ .Site.Params.contenturl }}{{ .File.Path }}" target="_blank" rel="noopener noreferrer">History</a>
+        <a class="text-blue-600 dark:text-blue-300" href="{{ .Site.Params.contenturl }}{{ .File.Path }}" target="_blank" rel="noopener noreferrer">History</a>
       </span>
     {{ end }}
     <div>
       {{ range (.GetTerms "tags") }}
         <span>
-          <a href="{{ .Permalink }}">&#035;{{ .LinkTitle }}</a>
+          <a class="text-blue-600 dark:text-blue-300" href="{{ .Permalink }}">&#035;{{ .LinkTitle }}</a>
         </span>
       {{ end }}
     </div>
   </div>
   {{ partial "toc" . }}
-  <article class="post-content" data-pagefind-body>
+  <article class="markdown" data-pagefind-body>
     {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" "${1}&nbsp;<a class=\"headline-hash\" href=\"#${2}\">#</a> ${3}" | safeHTML }}
   </article>
   {{ if .Site.Params.postnav }}

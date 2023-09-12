@@ -1,12 +1,12 @@
-<ul class="breadcrumb">
+<ul class="text-sm mb-1">
   {{- range .Ancestors.Reverse }}
     {{ if eq .IsHome true }}
-      <li><a href="{{ .Permalink }}">Home</a></li>
+      <li after=" » " class="after:content-[attr(after)] after:mx-1 inline"><a class="text-blue-600 dark:text-blue-300" href="{{ .Permalink }}">Home</a></li>
     {{ else }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      <li after=" » " class="after:content-[attr(after)] after:mx-1 inline"><a class="text-blue-600 dark:text-blue-300" href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
   {{- end }}
-  <li>
+  <li class="inline">
     {{ .Title }}
   </li>
 </ul>

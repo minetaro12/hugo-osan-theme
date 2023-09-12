@@ -1,10 +1,10 @@
 <ul class="list-post">
   <div>
-    <h1>{{ .Title }}</h1>
+    <h1 class="text-3xl font-bold mb-4">{{ .Title }}</h1>
   </div>
   {{ range .Pages.ByTitle }}
-  <li class="list-term">
-    <a href="{{ .Permalink }}" class="no-decoration">&#035;{{ .Title }}</a>
+  <li class="inline-block">
+    <a href="{{ .Permalink }}" class="block bg-white dark:bg-zinc-900 border-stone-400 border-2 px-2 py-1 m-2 rounded-md hover:invert hover:duration-500">&#035;{{ .Title }}</a>
   </li>
   {{ end }}
 </ul>

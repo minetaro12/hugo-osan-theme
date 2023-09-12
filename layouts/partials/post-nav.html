@@ -1,17 +1,17 @@
-<div class="post-nav">
+<div class="flex justify-between mb-4">
   {{ with .NextInSection }}
-  <div class="post-nav-next">
-    <span class="post-nav-arrow">←</span>
-    <span class="post-nav-title">{{ .Title }}</span>
-    <a href="{{ .Permalink }}"></a>
+  <div class="relative w-1/2 border-2 border-stone-400 rounded-l-md mr-1 p-4">
+    <span>←</span>
+    <span>{{ .Title }}</span>
+    <a class="absolute w-full h-full top-0 left-0" href="{{ .Permalink }}"></a>
   </div>
   {{ end }}
-  <div class="post-nav-separator"></div>
+  <div></div>
   {{ with .PrevInSection }}
-  <div class="post-nav-prev">
-    <span class="post-nav-title">{{ .Title }}</span>
-    <a href="{{ .Permalink }}"></a>
-    <span class="post-nav-arrow">→</span>
+  <div class="relative w-1/2 border-2 border-stone-400 flex justify-end rounded-r-md ml-1 p-4">
+    <span>{{ .Title }}</span>
+    <a class="absolute w-full h-full top-0 left-0" href="{{ .Permalink }}"></a>
+    <span>→</span>
   </div>
   {{ end }}
 </div>

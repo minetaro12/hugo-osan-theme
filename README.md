@@ -45,5 +45,14 @@ layout: "search"
 ---
 ```
 
+## Dev
+```bash
+$ pnpm i
+$ pnpm dev:tw
+
+#ビルド
+$ pnpm build
+```
+
 ## Thanks
 - https://github.com/feathericons/feather
