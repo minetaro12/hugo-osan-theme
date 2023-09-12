@@ -4,17 +4,13 @@
 
 {{ define "main" }}
 {{ partial "breadcrumb" . }}
-  <h1>{{ .Title }}</h1>
-  <ul class="list-post">
-    {{ range .Site.RegularPages.GroupByDate "2006-01" }}
-      {{ if  not (in .Key "0001") }}
-        <h3>{{ .Key }}</h3>
-        {{ range .Pages }}
-          {{ if in .Permalink "posts" }}
-            {{ partial "list-item" . }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
+<h1>{{ .Title }}</h1>
+<ul class="list-post">
+  {{ range (where .Site.RegularPages "Type" "posts").GroupByDate "2006-01" }}
+    <h3>{{ .Key }}</h3>
+    {{ range .Pages }}
+      {{ partial "list-item" . }}
     {{ end }}
-  </ul>
+  {{ end }}
+</ul>
 {{ end }}
