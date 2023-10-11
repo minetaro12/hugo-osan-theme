@@ -1,5 +1,6 @@
 .post-nav {
   display: flex;
+  gap: 5px;
   justify-content: space-between;
   margin: 2rem 0;
 }
@@ -41,16 +42,14 @@
 }
 
 .post-nav-next {
-  margin-right: 2px;
   // 左側だけ丸くする
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
 .post-nav-prev {
-  margin-left: 2px;
-  border-top-right-radius: 5px;
   // 右側だけ丸くする
+  border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   justify-content: flex-end;
 }
