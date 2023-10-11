@@ -1,5 +1,25 @@
 .toc {
-  margin: .5rem 0;
+  position: sticky;
+  top: 50px;
+  height: 100%;
+  width: 250px;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
+// 画面が狭い場合の目次
+.toc-mobile {
+  // 通常は非表示
+  display: none;
+
+  margin-top: 1rem;
+
+  // 画面が狭い場合は表示する
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
 
   >details {
     border-radius: 5px;
