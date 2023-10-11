@@ -15,7 +15,7 @@
       <header>
         {{ partial "header" . }}
       </header>
-      <div class="content">
+      <div class="content transition-fade" id="swup">
         {{ block "main" . }}
         {{ end }}
       </div>
@@ -24,4 +24,5 @@
       </footer>
     </div>
   </body>
+  
 </html>
