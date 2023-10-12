@@ -7,6 +7,10 @@ $ hugo new site new-site --format yml
 
 $ cd new-site
 
+# 依存パッケージの追加
+$ pnpm init
+$ pnpm add -D swup @swup/head-plugin
+
 # テーマの追加
 $ git clone https://github.com/minetaro12/hugo-osan-theme themes/hugo-osan-theme
 
