@@ -14,6 +14,8 @@ menu:
     - name: Tags
       weight: 2
       url: /tags
+      params:
+        swup: false
 
     - name: GitHub
       weight: 3
