@@ -1,0 +1,17 @@
+{
+  "name": "hugo-osan-theme",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch"
+  },
+  "keywords": [],
+  "author": "minetaro12",
+  "license": "MIT",
+  "dependencies": {
+    "@swup/head-plugin": "^2.1.2",
+    "swup": "^4.4.2",
+    "vite": "^4.4.11"
+  }
+}

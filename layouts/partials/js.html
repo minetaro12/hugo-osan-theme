@@ -10,11 +10,5 @@
   })(globalThis);
 </script>
 
-{{/*  Bundle  */}}
-{{ $consle := resources.Get "js/console.js" | js.Build }}
-{{ $darkmode := resources.Get "js/darkmode.js" | js.Build }}
-{{ $popupmenu := resources.Get "js/popup-menu.js" | js.Build }}
-{{ $swup := resources.Get "js/swup.js" | js.Build }}
-
-{{ $JS := slice $consle $darkmode $popupmenu $swup | resources.Concat "js/bundle.js" | resources.Minify }}
-<script src="{{ $JS.RelPermalink }}" defer></script>
+{{ $JS := resources.Get "js/bundle.umd.js" }}
+<script src="{{ $JS.RelPermalink }}"></script>
