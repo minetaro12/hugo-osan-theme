@@ -11,4 +11,4 @@
 </script>
 
 {{ $JS := resources.Get "js/bundle.umd.js" }}
-<script src="{{ $JS.RelPermalink }}"></script>
+<script src="{{ $JS.RelPermalink }}" defer></script>

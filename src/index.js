@@ -1,6 +1,6 @@
-import console from './console'
-import darkmode from './darkmode'
-import popupMenu from "./popupmenu"
+import showConsole from './showConsole'
+import darkMode from './darkMode'
+import popupMenu from "./popupMenu"
 
 import Swup from 'swup'
 import SwupHeadPlugin from '@swup/head-plugin'
@@ -10,7 +10,11 @@ const swup = new Swup({
   plugins: [new SwupHeadPlugin()]
 })
 
+// コンソールに表示
+showConsole()
 
-console()
-darkmode()
+// ダークモードのボタンハンドラ
+darkMode()
+
+// ポップアップメニューのボタンハンドラ
 popupMenu()
