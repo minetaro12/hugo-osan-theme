@@ -11,6 +11,30 @@
   }
 }
 
+.post-meta-tags {
+  margin-top: .5rem;
+
+  >a {
+    background-color: var(--bg-color);
+    border: 2px solid var(--br-color);
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px 10px;
+    transition: .5s;
+
+    &:hover {
+      border: 2px solid var(--br-color);
+      filter: invert(1);
+    }
+
+    &:active {
+      transform: scale(.98);
+      transform: 1s;
+    }
+  }
+}
+
 .wrapper {
   display: flex;
   gap: 1rem;

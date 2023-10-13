@@ -22,11 +22,9 @@
         <a href="{{ .Site.Params.contenturl }}{{ .File.Path }}" target="_blank" rel="noopener noreferrer">History</a>
       </span>
     {{ end }}
-    <div>
+    <div class="post-meta-tags">
       {{ range (.GetTerms "tags") }}
-        <span>
-          <a href="{{ .Permalink }}">&#035;{{ .LinkTitle }}</a>
-        </span>
+        <a href="{{ .Permalink }}" class="no-decoration">&#035;{{ .LinkTitle }}</a>
       {{ end }}
     </div>
   </div>
