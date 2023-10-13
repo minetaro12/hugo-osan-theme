@@ -45,6 +45,8 @@ li ul {
   visibility: hidden;
 }
 
-:has(> .headline-hash):hover .headline-hash {
-  visibility: visible;
+:has(> .headline-hash):hover {
+  .headline-hash {
+    visibility: visible;
+  }
 }
