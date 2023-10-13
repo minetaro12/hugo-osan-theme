@@ -11,11 +11,13 @@ export default () => {
       // テキストのコピー
       navigator.clipboard.writeText(block.firstChild.textContent)
 
-      // ボタンのテキストを変更
+      // ボタンのクラス名とテキストを変更
+      block.lastChild.className = "copy-button copy-button-copied"
       block.lastChild.innerText = "Copied!"
 
-      // 3秒後にボタンのテキストを元に戻す
+      // 3秒後にボタンを元に戻す
       setTimeout(() => {
+        block.lastChild.className = "copy-button"
         block.lastChild.innerText = "Copy"
       }, 3000)
     })
