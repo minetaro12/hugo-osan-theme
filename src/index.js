@@ -8,6 +8,7 @@ import SwupHeadPlugin from '@swup/head-plugin'
 
 // swupの初期化
 const swup = new Swup({
+  animateHistoryBrowsing: true,
   plugins: [new SwupHeadPlugin()]
 })
 
