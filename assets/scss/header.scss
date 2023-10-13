@@ -12,6 +12,15 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     user-select: none;
+
+    >#nojs-menu-button {
+      display: none;
+    }
+
+    >#nojs-menu-check {
+      display: none;
+    }
+
   }
 }
 

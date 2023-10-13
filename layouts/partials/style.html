@@ -1,2 +1,27 @@
 {{ $CSS := resources.Match "scss/*.scss" | resources.Concat "css/style.scss" | toCSS | minify }}
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}">
+
+{{/* JavaScriptが無効の場合の設定 */}}
+<noscript>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      html {
+        --a-color: #94b8ff;
+        --bg-color: #171717;
+        --fg-color: #cccccc;
+      }
+    }
+
+    header > nav > .menu-item {
+      display: none;
+    }
+
+    header > nav > #nojs-menu-button {
+      display: block;
+    }
+
+    #nojs-menu-check:checked ~ #popup-menu {
+      visibility: visible;
+    }
+  </style>
+</noscript>
