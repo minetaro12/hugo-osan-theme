@@ -21,16 +21,11 @@
     display: inline-block;
     margin-right: 5px;
     padding: 5px 10px;
-    transition: .5s;
 
     &:hover {
       border: 2px solid var(--br-color);
       filter: invert(1);
-    }
-
-    &:active {
-      transform: scale(.98);
-      transform: 1s;
+      transition: .5s;
     }
   }
 }
