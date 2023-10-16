@@ -1,4 +1,4 @@
-:not(.highlight > pre) > code {
+:not(.highlight > pre)>code {
   background-color: #272822;
   color: #f8f8f2;
   cursor: text;
@@ -18,7 +18,7 @@
   }
 }
 
-.highlight > pre {
+.highlight>pre {
   border-radius: 5px;
   cursor: initial;
   font-size: 0.9rem;
@@ -41,6 +41,7 @@
   visibility: hidden;
 
   &:hover {
+    cursor: pointer;
     opacity: 1;
   }
 }
