@@ -11,17 +11,17 @@
   {{ range $paginator.Pages }}
     {{ partial "list-item" . }}
   {{ end }}
-  <nav class="pagination">
-    {{ if .Paginator.HasPrev }}
-      {{ with .Paginator.Prev }}
-        <a class="page-prev" href="{{ .URL }}">{{ partial "svg/arrowLeft" . }}Newer</a>
-      {{ end }}
-    {{ end }}
-    <div class="pagination-separator"></div>
-    {{ if .Paginator.HasNext }}
-      {{ with .Paginator.Next }}
-        <a class="page-next" href="{{ .URL }}">Older{{ partial "svg/arrowRight" . }}</a>
-      {{ end }}
-    {{ end }}
-  </nav>
 </ul>
+<nav class="pagination">
+  {{ if .Paginator.HasPrev }}
+    {{ with .Paginator.Prev }}
+      <a class="page-prev" href="{{ .URL }}">{{ partial "svg/arrowLeft" . }}Newer</a>
+    {{ end }}
+  {{ end }}
+  <div class="pagination-separator"></div>
+  {{ if .Paginator.HasNext }}
+    {{ with .Paginator.Next }}
+      <a class="page-next" href="{{ .URL }}">Older{{ partial "svg/arrowRight" . }}</a>
+    {{ end }}
+  {{ end }}
+</nav>
