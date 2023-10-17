@@ -2,6 +2,7 @@ import showConsole from './showConsole'
 import darkMode from './darkMode'
 import popupMenu from "./popupMenu"
 import copyButton from './copyButton'
+import movetopButton from './movetopButton'
 
 import Swup from 'swup'
 import SwupHeadPlugin from '@swup/head-plugin'
@@ -25,4 +26,10 @@ popupMenu()
 copyButton()
 swup.hooks.on("page:view", () => {
   copyButton()
+})
+
+// トップへ戻るボタンの追加
+movetopButton()
+swup.hooks.on("page:view", () => {
+  movetopButton()
 })
