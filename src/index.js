@@ -1,11 +1,11 @@
-import showConsole from './showConsole'
-import darkMode from './darkMode'
+import showConsole from "./showConsole"
+import darkMode from "./darkMode"
 import popupMenu from "./popupMenu"
-import copyButton from './copyButton'
-import movetopButton from './movetopButton'
+import copyButton from "./copyButton"
+import movetopButton from "./movetopButton"
 
-import Swup from 'swup'
-import SwupHeadPlugin from '@swup/head-plugin'
+import Swup from "swup"
+import SwupHeadPlugin from "@swup/head-plugin"
 
 // swupの初期化
 const swup = new Swup({
