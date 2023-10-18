@@ -2,7 +2,7 @@
   {{ $width := .Get "width" }}
   {{ $height := .Get "height" }}
   {{ $alt := .Get "alt" }}
-  <a href="{{ .Get "src" }}" target="_blank" rel="noopener noreferrer" class="no-decoration">
+  <a href="{{ .Get "src" }}" target="_blank" rel="noopener noreferrer" class="no-decoration img-link">
     {{ $original_image := .Page.Resources.GetMatch (.Get "src") }}
     {{ if $original_image }}
       {{ $resized := $original_image.Fit "600x480 q70" }}

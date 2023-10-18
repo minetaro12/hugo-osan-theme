@@ -3,6 +3,7 @@ import darkMode from "./darkMode"
 import popupMenu from "./popupMenu"
 import copyButton from "./copyButton"
 import movetopButton from "./movetopButton"
+import imgPopup from "./imgPopup"
 
 import Swup from "swup"
 import SwupHeadPlugin from "@swup/head-plugin"
@@ -32,4 +33,10 @@ swup.hooks.on("page:view", () => {
 movetopButton()
 swup.hooks.on("page:view", () => {
   movetopButton()
+})
+
+// 画像のポップアップ
+imgPopup()
+swup.hooks.on("page:view", () => {
+  imgPopup()
 })

@@ -1,0 +1,23 @@
+.img-popup {
+  background-color: #00000093;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  >img {
+    margin: auto;
+    object-fit: contain;
+    scale: .8;
+    height: 100%;
+    width: 100%;
+
+    // 画面が狭い場合はスケールを解除
+    @media screen and (max-width: 800px) {
+      scale: unset;
+    }
+  }
+}
