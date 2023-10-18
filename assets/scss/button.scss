@@ -23,8 +23,7 @@ button {
   height: 40px;
 
   &:hover {
-    filter: invert(100%);
-    transition: 0.5s;
+    cursor: pointer;
   }
 }
 
