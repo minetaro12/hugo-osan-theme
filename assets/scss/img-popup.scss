@@ -8,6 +8,10 @@
   top: 0;
   left: 0;
 
+  &:hover {
+    cursor: zoom-out;
+  }
+
   >img {
     margin: auto;
     object-fit: contain;

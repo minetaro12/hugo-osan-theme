@@ -1,5 +1,6 @@
 export default () => {
   document.querySelectorAll(".post-content .img-link").forEach((element) => {
+    element.style.cursor = "zoom-in"
     element.addEventListener("click", (event) => {
       // リンク遷移をキャンセル
       event.preventDefault()
