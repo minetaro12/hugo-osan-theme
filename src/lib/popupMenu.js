@@ -1,8 +1,7 @@
 export default () => {
-  // document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.getElementById("menu-button")
-  const popupMenu = document.getElementById("popup-menu")
-  const main = document.getElementById("main")
+  const menuButton = document.querySelector("#menu-button")
+  const popupMenu = document.querySelector("#popup-menu")
+  const main = document.querySelector("#main")
 
   menuButton.addEventListener("click", () => {
     popupMenu.classList.toggle("hide")
@@ -13,6 +12,4 @@ export default () => {
       popupMenu.classList.add("hide")
     }
   })
-  // })
-
 }

@@ -9,11 +9,11 @@ export default () => {
     localStorage.setItem("dark", "off")
   }
 
-  const lightButton = document.getElementById("theme-button-light")
+  const lightButton = document.querySelector("#theme-button-light")
   lightButton.addEventListener("click", () => {
     switchMode(false)
   })
-  const darkButton = document.getElementById("theme-button-dark")
+  const darkButton = document.querySelector("#theme-button-dark")
   darkButton.addEventListener("click", () => {
     switchMode(true)
   })
