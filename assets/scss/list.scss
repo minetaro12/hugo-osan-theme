@@ -2,7 +2,7 @@
   margin: .5rem 0;
 }
 
-.list-post {
+.list-post, .list-term {
   padding: 0;
   list-style: none;
   max-width: 800px;
@@ -48,7 +48,7 @@
   }
 }
 
-.list-term {
+.list-term-item {
   display: inline-block;
   margin: 8px;
 

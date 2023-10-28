@@ -10,3 +10,12 @@ div#search {
     text-decoration: none;
   }
 }
+
+.search-term {
+  background-color: var(--bg-color);
+  border: 2px solid var(--br-color);
+  border-radius: 5px;
+  color: var(--fg-color);
+  max-width: 10rem;
+  padding: 5px;
+}

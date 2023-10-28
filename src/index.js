@@ -4,6 +4,7 @@ import popupMenu from "./lib/popupMenu"
 import copyButton from "./lib/copyButton"
 import movetopButton from "./lib/movetopButton"
 import imgPopup from "./lib/imgPopup"
+import searchTag from "./lib/searchTag"
 
 import Swup from "swup"
 import SwupHeadPlugin from "@swup/head-plugin"
@@ -39,4 +40,10 @@ swup.hooks.on("page:view", () => {
 imgPopup()
 swup.hooks.on("page:view", () => {
   imgPopup()
+})
+
+// タグの検索
+searchTag()
+swup.hooks.on("page:view", () => {
+  searchTag()
 })
