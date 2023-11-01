@@ -4,9 +4,8 @@ export default () => {
 
   const search = document.createElement("input")
   search.setAttribute("type", "text")
-  search.classList.add("search-term")
+  search.classList.add("search-term-input")
   search.placeholder = "Search Tags"
-  search.autofocus = true
 
   if (list_term) {
     content.insertBefore(search, list_term)

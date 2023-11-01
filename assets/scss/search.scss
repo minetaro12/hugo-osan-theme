@@ -1,17 +1,4 @@
-div#search {
-  --pagefind-ui-primary: var(--fg-color);
-  --pagefind-ui-text: var(--fg-color);
-  --pagefind-ui-background: var(--bg-color);
-  --pagefind-ui-border: var(--fg-color);
-  --pagefind-ui-border-width: 1px;
-  margin: 1rem 0;
-
-  a {
-    text-decoration: none;
-  }
-}
-
-.search-term {
+.search-term-input {
   background-color: var(--bg-color);
   border: 2px solid var(--br-color);
   border-radius: 5px;
