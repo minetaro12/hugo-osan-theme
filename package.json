@@ -12,6 +12,6 @@
   "dependencies": {
     "@swup/head-plugin": "^2.1.2",
     "swup": "^4.4.2",
-    "vite": "^4.4.11"
+    "vite": "^4.5.0"
   }
 }
