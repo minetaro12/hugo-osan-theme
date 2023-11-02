@@ -12,6 +12,7 @@ let data
   data = await res.json()
   result.textContent = ""
   searchInput.removeAttribute("disabled")
+  searchInputClear.style.visibility = "visible"
 })()
 
 searchInput.addEventListener("input", (e) => {
