@@ -2,17 +2,25 @@
   Search | {{ .Site.Title }}
 {{ end }}
 
+{{ define "head" }}
+  <style>
+    .search-highlight {
+      background-color: yellow;
+      color: black;
+    }
+  </style>
+  {{ $search := resources.Get "js/search/searchPosts.js" | js.Build }}
+  {{ $JS := slice $search | resources.Concat "js/search.js" | resources.Minify }}
+  <script src="{{ $JS.RelPermalink }}" defer data-swup-reload-script></script>
+{{ end }}
+
 {{ define "main" }}
-  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-  <script src="/pagefind/pagefind-ui.js"></script>
-  <div id="search"></div>
-  <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({
-          element: "#search",
-          showSubResults: true,
-          showImages: false
-        });
-    });
-  </script>
+  <div class="search-wrapper">
+    <input type="text" class="search-input" placeholder="Search" disabled>
+    <button class="search-input-clear">Clear</button>
+  </div>
+  <noscript>
+    検索機能にはJavaScriptが必要です。
+  </noscript>
+  <div class="search-result"></div>
 {{ end }}

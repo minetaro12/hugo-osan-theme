@@ -9,6 +9,4 @@
     }
   })(globalThis);
 </script>
-
-{{ $JS := resources.Get "js/bundle.umd.js" }}
-<script src="{{ $JS.RelPermalink }}" defer></script>
+<script src="/js/bundle.umd.js" defer></script>

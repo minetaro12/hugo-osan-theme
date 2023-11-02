@@ -8,6 +8,12 @@ dependencies:
   '@swup/head-plugin':
     specifier: ^2.1.2
     version: 2.1.2(swup@4.4.2)
+  '@swup/progress-plugin':
+    specifier: ^3.1.2
+    version: 3.1.2(swup@4.4.2)
+  '@swup/scripts-plugin':
+    specifier: ^2.1.0
+    version: 2.1.0(swup@4.4.2)
   swup:
     specifier: ^4.4.2
     version: 4.4.2
@@ -227,6 +233,24 @@ packages:
   /@swup/plugin@4.0.0:
     resolution: {integrity: sha512-3Kq31BJxnzoPg643YxGoWQggoU6VPKZpdE5CqqmP7wwkpCYTzkRmrfcQ29mGhsSS7xfS7D33iZoBiwY+wPoo2A==}
     dependencies:
+      swup: 4.4.2
+    dev: false
+
+  /@swup/progress-plugin@3.1.2(swup@4.4.2):
+    resolution: {integrity: sha512-cYLY5cPP9xIBzlf4X/KpjerZmzKfje3y9r/b4/bqwMsPLmViu0v94icXmIFte55GkhPWEuP1v1stooMLxgkDrg==}
+    peerDependencies:
+      swup: ^4.0.0
+    dependencies:
+      '@swup/plugin': 4.0.0
+      swup: 4.4.2
+    dev: false
+
+  /@swup/scripts-plugin@2.1.0(swup@4.4.2):
+    resolution: {integrity: sha512-JSMFsFCN9gn4q3m1Ccv0gq3gwRoZl6UGALOQO3OeQ8wOIq9vPC5dcUD3CMBuaPanksjR4GC8ZoukIjHrlT52fg==}
+    peerDependencies:
+      swup: ^4.2.0
+    dependencies:
+      '@swup/plugin': 4.0.0
       swup: 4.4.2
     dev: false
 

@@ -1,7 +1,7 @@
 /** @type {import('vite').UserConfig} */
 export default {
   build: {
-    outDir: "./assets/js/",
+    outDir: "./static/js/",
     lib: {
       entry: "./src/index.js",
       formats: ["umd"],
