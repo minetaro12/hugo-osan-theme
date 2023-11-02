@@ -1,4 +1,6 @@
-{{ $CSS := resources.Match "scss/*.scss" | resources.Concat "css/style.scss" | toCSS | minify }}
+{{- $opts := ( dict "transpiler" "dartsass") -}}
+{{ $CSS := resources.Get "scss/main.scss" | toCSS $opts }}
+{{ $CSS := slice $CSS | resources.Concat "css/style.css" | minify }}
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}">
 
 {{/* JavaScriptが無効の場合の設定 */}}
@@ -12,15 +14,15 @@
       }
     }
 
-    header > nav > .menu-item {
+    header>nav>.menu-item {
       display: none;
     }
 
-    header > nav > #nojs-menu-button {
+    header>nav>#nojs-menu-button {
       display: block;
     }
 
-    #nojs-menu-check:checked ~ #popup-menu {
+    #nojs-menu-check:checked~#popup-menu {
       visibility: visible;
     }
   </style>

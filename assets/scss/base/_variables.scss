@@ -1,0 +1,13 @@
+html {
+  --a-color: #174dba;
+  --bg-color: white;
+  --fg-color: black;
+  --br-color: #919191;
+}
+
+/* Dark mode */
+html.Dark {
+  --a-color: #94b8ff;
+  --bg-color: #171717;
+  --fg-color: #cccccc;
+}

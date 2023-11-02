@@ -1,0 +1,11 @@
+.no-decoration {
+  color: var(--fg-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--fg-color);
+    filter: unset;
+    text-decoration: none;
+    border-bottom: none;
+  }
+}

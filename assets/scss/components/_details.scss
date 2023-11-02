@@ -7,10 +7,10 @@
   &[open]>summary {
     cursor: zoom-out;
   }
-}
 
-.details-content {
-  border: 1px solid var(--fg-color);
-  border-radius: 5px;
-  padding: 10px;
+  >.details-content {
+    border: 1px solid var(--fg-color);
+    border-radius: 5px;
+    padding: 10px;
+  }
 }

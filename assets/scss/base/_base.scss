@@ -1,0 +1,47 @@
+html {
+  scroll-padding-top: 70px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  cursor: default;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  margin: auto;
+  overflow-y: scroll;
+  word-break: break-word;
+}
+
+#main {
+  display: flex;
+  flex-flow: column;
+  min-height: 100svh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  flex: 1;
+  margin: auto;
+  max-width: 1000px;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+a {
+  color: var(--a-color);
+  text-decoration: none;
+
+  &:hover {
+    filter: brightness(1.7);
+    text-decoration: underline solid 2px;
+  }
+}
+
+// 各ページのタイトル
+.page-title {
+  margin: .5rem 0;
+}

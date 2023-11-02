@@ -15,7 +15,8 @@
     padding: 5px;
     margin: 5px;
 
-    &:hover, &:focus-visible {
+    &:hover,
+    &:focus-visible {
       filter: invert(100%);
       transition: .5s;
     }

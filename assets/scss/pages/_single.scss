@@ -1,0 +1,132 @@
+.post-title {
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.post-meta {
+  font-size: smaller;
+
+  span {
+    margin-right: 5px;
+  }
+}
+
+.post-meta-tags {
+  margin-top: .5rem;
+
+  >a {
+    background-color: var(--bg-color);
+    border: 2px solid var(--br-color);
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px 10px;
+
+    &:hover {
+      border: 2px solid var(--br-color);
+      filter: invert(1);
+      transition: .5s;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row-reverse;
+  flex: 1;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.post-content {
+  flex: 3;
+  line-height: 1.6;
+  overflow: hidden;
+
+  img {
+    border-radius: 5px;
+    max-width: 100%;
+  }
+
+  hr {
+    height: 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid var(--br-color);
+  }
+
+  >table {
+    border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
+    word-break: keep-all;
+
+    >thead {
+      background-color: #98989837;
+    }
+
+    >thead>tr>th,
+    >tbody>tr>td {
+      border: 1px solid var(--br-color);
+      padding: 10px;
+    }
+  }
+}
+
+.headline-hash {
+  visibility: hidden;
+}
+
+:has(> .headline-hash):hover {
+  .headline-hash {
+    visibility: visible;
+  }
+}
+
+.toc {
+  position: sticky;
+  top: 50px;
+  height: 100%;
+  width: 250px;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
+// 画面が狭い場合の目次
+.toc-mobile {
+  // 通常は非表示
+  display: none;
+
+  margin-top: 1rem;
+
+  // 画面が狭い場合は表示する
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+
+  >details {
+    border-radius: 5px;
+    border: 1px solid var(--fg-color);
+    margin: 5px;
+    padding: 10px;
+
+    >summary {
+      cursor: zoom-in;
+      user-select: none;
+    }
+
+    &[open]>summary {
+      cursor: zoom-out;
+    }
+  }
+}
+
+nav#TableOfContents {
+  line-height: 1.5;
+}
