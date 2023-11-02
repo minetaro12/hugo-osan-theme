@@ -10,7 +10,7 @@
     }
   </style>
   {{ $JS := resources.Get "js/search/index.js" | js.Build | resources.Minify }}
-  <script src="{{ $JS.RelPermalink }}" defer data-swup-reload-script></script>
+  <script src="{{ $JS.RelPermalink }}" defer></script>
 {{ end }}
 
 {{ define "main" }}

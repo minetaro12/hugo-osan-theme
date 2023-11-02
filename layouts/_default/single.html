@@ -5,7 +5,7 @@
 {{ define "head" }}
   {{ partial "hack" . }}
   {{ $JS := resources.Get "js/single/index.js" | js.Build | resources.Minify }}
-  <script src="{{ $JS.RelPermalink }}" defer data-swup-reload-script></script>
+  <script src="{{ $JS.RelPermalink }}" defer></script>
 {{ end }}
 
 {{ define "main" }}
