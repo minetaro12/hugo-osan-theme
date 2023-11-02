@@ -26,7 +26,7 @@
           {{ .Name | safeHTML }}{{ partial "svg/externalLink" . }}
         </a>
       {{ else }}
-        <a href="{{ .URL }}" class="no-decoration" {{ if eq .Params.swup false }} data-no-swup {{ end }}>{{ .Name | safeHTML }}</a>
+        <a href="{{ .URL }}" class="no-decoration">{{ .Name | safeHTML }}</a>
       {{ end }}
     {{ end }}
   </div>
