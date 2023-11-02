@@ -35,3 +35,6 @@ markup:
   highlight:
     guessSyntax: true
     style: monokai #see https://xyproto.github.io/splash/docs/all.html
+
+outputs:
+  home: [html, rss, json]
