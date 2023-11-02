@@ -21,37 +21,10 @@ header {
       display: none;
     }
 
-    >.site-logo {
+    >#site-logo {
       font-size: x-large;
       font-weight: bold;
       white-space: nowrap;
     }
   }
-}
-
-#menu-button,
-#theme-button-light,
-#theme-button-dark {
-  background-color: var(--bg-color);
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 8px 15px;
-
-  &:hover,
-  &:focus-visible {
-    filter: invert(100%);
-    transition: 0.5s;
-  }
-}
-
-#theme-button-light {
-  display: none;
-}
-
-html.Dark #theme-button-light {
-  display: unset;
-}
-
-html.Dark #theme-button-dark {
-  display: none;
 }

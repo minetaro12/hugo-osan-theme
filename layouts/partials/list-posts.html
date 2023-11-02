@@ -1,7 +1,7 @@
 {{ if eq .IsHome false }}
-<h1 class="page-title">{{ .Title }}</h1>
+<h1 id="page-title">{{ .Title }}</h1>
 {{ end }}
-<ul class="list-post">
+<ul id="list-posts">
   {{ $paginator := 0 }}
   {{ if eq .IsHome false }}
     {{ $paginator = .Paginator }}
@@ -9,19 +9,19 @@
     {{ $paginator = .Paginate (where .Site.RegularPages "Type" "posts") }}
   {{ end }}
   {{ range $paginator.Pages }}
-    {{ partial "list-item" . }}
+    {{ partial "list-posts-item" . }}
   {{ end }}
 </ul>
-<nav class="pagination">
+<nav id="pagination">
   {{ if .Paginator.HasPrev }}
     {{ with .Paginator.Prev }}
-      <a class="page-prev" href="{{ .URL }}">{{ partial "svg/arrowLeft" . }}Newer</a>
+      <a id="pagenation-prev" href="{{ .URL }}">{{ partial "svg/arrowLeft" . }}Newer</a>
     {{ end }}
   {{ end }}
-  <div class="pagination-separator"></div>
+  <div id="pagination-separator"></div>
   {{ if .Paginator.HasNext }}
     {{ with .Paginator.Next }}
-      <a class="page-next" href="{{ .URL }}">Older{{ partial "svg/arrowRight" . }}</a>
+      <a id="pagenation-next" href="{{ .URL }}">Older{{ partial "svg/arrowRight" . }}</a>
     {{ end }}
   {{ end }}
 </nav>

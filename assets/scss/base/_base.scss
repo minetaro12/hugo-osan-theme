@@ -19,7 +19,7 @@ body {
   min-height: 100svh;
 }
 
-.content {
+#content {
   display: flex;
   flex-direction: column;
 
@@ -42,6 +42,6 @@ a {
 }
 
 // 各ページのタイトル
-.page-title {
+#page-title {
   margin: .5rem 0;
 }

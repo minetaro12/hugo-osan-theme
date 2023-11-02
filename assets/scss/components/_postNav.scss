@@ -1,11 +1,11 @@
-.post-nav {
+#post-nav {
   display: flex;
   gap: 5px;
   justify-content: space-between;
   margin: 2rem 0;
 
-  >.post-nav-next,
-  .post-nav-prev {
+  >#post-nav-next,
+  >#post-nav-prev {
     display: flex;
     align-items: center;
     position: relative;
@@ -40,13 +40,13 @@
     }
   }
 
-  >.post-nav-next {
+  >#post-nav-next {
     // 左側だけ丸くする
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
 
-  .post-nav-prev {
+  >#post-nav-prev {
     // 右側だけ丸くする
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;

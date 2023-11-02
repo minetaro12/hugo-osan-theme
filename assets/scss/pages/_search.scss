@@ -1,9 +1,9 @@
-.search-wrapper {
+#search-wrapper {
   align-items: center;
   display: flex;
   position: relative;
 
-  >.search-input {
+  >#search-input {
     background-color: var(--bg-color);
     border: 2px solid var(--br-color);
     border-radius: 5px;
@@ -14,7 +14,7 @@
     width: 100%;
   }
 
-  >.search-input-clear {
+  >#search-input-clear {
     cursor: pointer;
     position: absolute;
     right: 1rem;

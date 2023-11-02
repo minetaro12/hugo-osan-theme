@@ -14,12 +14,12 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="search-wrapper">
-    <input type="text" class="search-input" placeholder="Search" disabled>
-    <button class="search-input-clear">Clear</button>
+  <div id="search-wrapper">
+    <input type="text" id="search-input" placeholder="Search" disabled>
+    <button id="search-input-clear">Clear</button>
   </div>
   <noscript>
     検索機能にはJavaScriptが必要です。
   </noscript>
-  <div class="search-result"></div>
+  <div id="search-result"></div>
 {{ end }}

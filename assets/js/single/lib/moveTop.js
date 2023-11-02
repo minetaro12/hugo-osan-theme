@@ -1,5 +1,5 @@
 export default () => {
-  const wrapper = document.querySelector(".wrapper")
+  const wrapper = document.querySelector("#wrapper")
 
   const movetopButton = document.createElement("button")
 

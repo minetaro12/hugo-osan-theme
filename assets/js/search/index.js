@@ -1,6 +1,6 @@
-const result = document.querySelector(".search-result")
-const searchInput = document.querySelector(".search-input")
-const searchInputClear = document.querySelector(".search-input-clear")
+const result = document.querySelector("#search-result")
+const searchInput = document.querySelector("#search-input")
+const searchInputClear = document.querySelector("#search-input-clear")
 
 // データを取得
 let data

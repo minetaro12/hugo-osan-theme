@@ -1,12 +1,12 @@
-.post-title {
+#post-title {
   font-size: x-large;
   font-weight: 600;
 }
 
-.post-meta {
+#post-meta {
   font-size: smaller;
 
-  span {
+  >span {
     margin-right: 5px;
   }
 }
@@ -30,7 +30,7 @@
   }
 }
 
-.wrapper {
+#wrapper {
   display: flex;
   gap: 1rem;
   flex-direction: row-reverse;
@@ -42,7 +42,7 @@
   }
 }
 
-.post-content {
+#post-content {
   flex: 3;
   line-height: 1.6;
   overflow: hidden;
@@ -87,7 +87,7 @@
   }
 }
 
-.toc {
+#toc {
   position: sticky;
   top: 50px;
   height: 100%;
@@ -99,7 +99,7 @@
 }
 
 // 画面が狭い場合の目次
-.toc-mobile {
+#toc-mobile {
   // 通常は非表示
   display: none;
 

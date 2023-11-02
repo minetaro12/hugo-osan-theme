@@ -10,8 +10,8 @@
 
 {{ define "main" }}
   {{ partial "breadcrumb" . }}
-  <span class="post-title" data-pagefind-body>{{ .Title }}</span>
-  <div class="post-meta">
+  <span id="post-title" data-pagefind-body>{{ .Title }}</span>
+  <div id="post-meta">
     {{ if .Date }}
       <span>
         {{ partial "svg/calendar" . }}
@@ -30,9 +30,9 @@
       {{ end }}
     </div>
   </div>
-  <div class="wrapper">
+  <div id="wrapper">
     {{ partial "toc" . }}
-    <article class="post-content" data-pagefind-body>
+    <article id="post-content">
       {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" "${1}&nbsp;<a class=\"headline-hash\" href=\"#${2}\">#</a> ${3}" | safeHTML }}
     </article>
   </div>

@@ -1,4 +1,4 @@
-<ul class="breadcrumb">
+<ul id="breadcrumb">
   {{- range .Ancestors.Reverse }}
     {{ if eq .IsHome true }}
       <li><a href="{{ .Permalink }}">Home</a></li>
