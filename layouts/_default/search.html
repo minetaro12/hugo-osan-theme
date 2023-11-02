@@ -9,8 +9,7 @@
       color: black;
     }
   </style>
-  {{ $search := resources.Get "js/search/searchPosts.js" | js.Build }}
-  {{ $JS := slice $search | resources.Concat "js/search.js" | resources.Minify }}
+  {{ $JS := resources.Get "js/search/index.js" | js.Build | resources.Minify }}
   <script src="{{ $JS.RelPermalink }}" defer data-swup-reload-script></script>
 {{ end }}
 

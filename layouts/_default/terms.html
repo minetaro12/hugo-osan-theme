@@ -3,8 +3,7 @@
 {{ end }}
 
 {{ define "head" }}
-  {{ $search := resources.Get "js/tags/searchTags.js" | js.Build }}
-  {{ $JS := slice $search | resources.Concat "js/searchTags.js" | resources.Minify }}
+  {{ $JS := resources.Get "js/tags/index.js" | js.Build | resources.Minify }}
   <script src="{{ $JS.RelPermalink }}" defer data-swup-reload-script></script>
 {{ end }}
 

@@ -4,10 +4,7 @@
 
 {{ define "head" }}
   {{ partial "hack" . }}
-  {{ $copybutton := resources.Get "js/single/copyButton.js" | js.Build }}
-  {{ $imgbutton := resources.Get "js/single/imgPopup.js" | js.Build }}
-  {{ $movetop := resources.Get "js/single/moveTop.js" | js.Build }}
-  {{ $JS := slice $copybutton $imgbutton $movetop | resources.Concat "js/single.js" | resources.Minify }}
+  {{ $JS := resources.Get "js/single/index.js" | js.Build | resources.Minify }}
   <script src="{{ $JS.RelPermalink }}" defer data-swup-reload-script></script>
 {{ end }}
 
