@@ -5,6 +5,7 @@ const search = document.createElement("input")
 search.setAttribute("type", "text")
 search.classList.add("search-term-input")
 search.placeholder = "Search Tags"
+search.setAttribute("autofocus", true)
 
 content.insertBefore(search, list_term)
 
