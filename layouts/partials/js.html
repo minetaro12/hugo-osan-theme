@@ -9,5 +9,5 @@
     }
   })(globalThis);
 </script>
-{{ $JS := resources.Get "js/base/index.js" | js.Build | resources.Minify }}
+{{ $JS := resources.Get "js/base/index.js" | js.Build | minify | fingerprint }}
 <script src="{{ $JS.RelPermalink }}" defer></script>

@@ -1,6 +1,6 @@
 {{- $opts := ( dict "transpiler" "dartsass") -}}
 {{ $CSS := resources.Get "scss/main.scss" | toCSS $opts }}
-{{ $CSS := slice $CSS | resources.Concat "css/style.css" | minify }}
+{{ $CSS := slice $CSS | resources.Concat "css/style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}">
 
 {{/* JavaScriptが無効の場合の設定 */}}
