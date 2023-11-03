@@ -1,5 +1,8 @@
 # hugo-osan-theme
 
+## 依存関係
+[Dart Sass](https://sass-lang.com/dart-sass/)が必要です
+
 ## 使い方
 ```
 # サイトの作成
