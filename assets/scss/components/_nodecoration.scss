@@ -1,11 +1,9 @@
 .no-decoration {
   color: var(--fg-color);
+  font-weight: unset;
   text-decoration: none;
 
   &:hover {
-    color: var(--fg-color);
-    filter: unset;
     text-decoration: none;
-    border-bottom: none;
   }
 }

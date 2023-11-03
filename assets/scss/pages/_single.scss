@@ -47,9 +47,29 @@
   line-height: 1.6;
   overflow: hidden;
 
+  a {
+    color: var(--fg-color);
+    box-shadow: inset 0px -3px var(--post-a-color);
+    font-weight: unset;
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: inset 0px -1.5rem var(--post-a-color);
+      transition: box-shadow .5s;
+    }
+  }
+
   img {
     border-radius: 5px;
     max-width: 100%;
+  }
+
+  .img-link {
+    box-shadow: unset;
+
+    &:hover {
+      box-shadow: unset;
+    }
   }
 
   hr {

@@ -1,5 +1,6 @@
 html {
-  --a-color: #174dba;
+  --a-color: #006aff;
+  --post-a-color: #477ce5;
   --bg-color: white;
   --fg-color: black;
   --br-color: #919191;
@@ -7,7 +8,8 @@ html {
 
 /* Dark mode */
 html.Dark {
-  --a-color: #94b8ff;
+  --a-color: #0084ff;
+  --post-a-color: #647aa5;
   --bg-color: #171717;
   --fg-color: #cccccc;
 }

@@ -3,14 +3,14 @@
   <div id="post-nav-next">
     <span class="post-nav-arrow">←</span>
     <span class="post-nav-title">{{ .Title }}</span>
-    <a href="{{ .Permalink }}"></a>
+    <a href="{{ .Permalink }}" class="no-decoration"></a>
   </div>
   {{ end }}
   <div id="post-nav-separator"></div>
   {{ with .PrevInSection }}
   <div id="post-nav-prev">
     <span class="post-nav-title">{{ .Title }}</span>
-    <a href="{{ .Permalink }}"></a>
+    <a href="{{ .Permalink }}" class="no-decoration"></a>
     <span class="post-nav-arrow">→</span>
   </div>
   {{ end }}
