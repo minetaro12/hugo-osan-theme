@@ -79,7 +79,8 @@
     border-top: 1px solid var(--br-color);
   }
 
-  >table {
+  >table,
+  .details-content>table {
     border-collapse: collapse;
     display: block;
     overflow-x: auto;
@@ -108,8 +109,11 @@
 }
 
 #toc {
+  background-color: #80808044;
+  border-radius: 5px;
+  padding: 0 10px;
   position: sticky;
-  top: 50px;
+  top: 70px;
   height: 100%;
   width: 250px;
 
@@ -149,4 +153,8 @@
 
 nav.TableOfContents {
   line-height: 1.5;
+
+  >ul {
+    padding-left: 25px;
+  }
 }
