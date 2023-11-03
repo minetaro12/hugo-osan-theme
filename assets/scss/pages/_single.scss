@@ -15,17 +15,13 @@
   margin-top: .5rem;
 
   >a {
-    background-color: var(--bg-color);
-    border: 2px solid var(--br-color);
+    background-color: #80808044;
     border-radius: 5px;
     display: inline-block;
-    margin-right: 5px;
     padding: 5px 10px;
 
     &:hover {
-      border: 2px solid var(--br-color);
-      filter: invert(1);
-      transition: .5s;
+      background-color: #808080c9;
     }
   }
 }

@@ -11,7 +11,7 @@ content.insertBefore(search, list_term)
 
 search.addEventListener("input", () => {
   document.querySelectorAll(".list-terms-item").forEach((item) => {
-    if (item.innerText.toLowerCase().includes(search.value.toLowerCase())) {
+    if (item.childNodes[0].childNodes[0].textContent.toLowerCase().includes(search.value.toLowerCase())) {
       item.style.display = "inline-block"
     } else {
       item.style.display = "none"

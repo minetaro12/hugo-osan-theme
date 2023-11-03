@@ -2,7 +2,9 @@
 <ul id="list-terms">
   {{ range .Pages.ByTitle }}
   <li class="list-terms-item">
-    <a href="{{ .Permalink }}" class="no-decoration">&#035;{{ .Title }}</a>
+    <a href="{{ .Permalink }}" class="no-decoration">
+      &#035;{{ .Title }}<sup>{{ .Pages | len }}</sup>
+    </a>
   </li>
   {{ end }}
 </ul>
