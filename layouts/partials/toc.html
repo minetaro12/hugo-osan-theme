@@ -1,13 +1,13 @@
 {{ if eq .Params.showToc true }}
   <div id="toc">
     <h3>Table of Contents</h3>
-    {{ .TableOfContents }}
+    {{ replace .Page.TableOfContents "id=\"TableOfContents\"" "class=\"TableOfContents\"" | safeHTML }}
   </div>
   {{/*  モバイル端末用  */}}
   <div id="toc-mobile">
     <details>
       <summary>Toc</summary>
-      {{ .TableOfContents }}
+      {{ replace .Page.TableOfContents "id=\"TableOfContents\"" "class=\"TableOfContents\"" | safeHTML }}
     </details>
   </div>
 {{ end }}
