@@ -15,13 +15,13 @@
 <nav id="pagination">
   {{ if .Paginator.HasPrev }}
     {{ with .Paginator.Prev }}
-      <a id="pagenation-prev" class="no-decoration" href="{{ .URL }}">{{ partial "svg/arrowLeft" . }}Newer</a>
+      <a id="pagination-prev" class="no-decoration" href="{{ .URL }}">{{ partial "svg/arrowLeft" . }}Newer</a>
     {{ end }}
   {{ end }}
   <div id="pagination-separator"></div>
   {{ if .Paginator.HasNext }}
     {{ with .Paginator.Next }}
-      <a id="pagenation-next" class="no-decoration" href="{{ .URL }}">Older{{ partial "svg/arrowRight" . }}</a>
+      <a id="pagination-next" class="no-decoration" href="{{ .URL }}">Older{{ partial "svg/arrowRight" . }}</a>
     {{ end }}
   {{ end }}
 </nav>

@@ -4,7 +4,7 @@ export default () => {
   button.innerText = "Copy"
 
   // ハイライトされたコードブロックにボタンを追加
-  document.querySelectorAll(".highlight").forEach((block) => {
+  document.querySelectorAll("div.highlight").forEach((block) => {
     block.appendChild(button.cloneNode(true))
 
     block.lastChild.addEventListener("click", () => {

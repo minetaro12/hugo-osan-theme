@@ -15,13 +15,13 @@
   margin-top: .5rem;
 
   >a {
-    background-color: #80808044;
+    background-color: var(--card-bg-color);
     border-radius: 5px;
     display: inline-block;
     padding: 5px 10px;
 
     &:hover {
-      background-color: #808080c9;
+      background-color: var(--card-bg-color-hover);
     }
   }
 }
@@ -43,7 +43,7 @@
   line-height: 1.6;
   overflow: hidden;
 
-  a {
+  :not(.gist >) a {
     color: var(--fg-color);
     box-shadow: inset 0px -3px var(--post-a-color);
     font-weight: unset;
@@ -51,7 +51,7 @@
 
     &:hover {
       box-shadow: inset 0px -1.5rem var(--post-a-color);
-      transition: box-shadow .5s;
+      transition: .5s;
     }
   }
 
@@ -105,7 +105,7 @@
 }
 
 #toc {
-  background-color: #80808044;
+  background-color: var(--card-bg-color);
   border-radius: 5px;
   padding: 0 10px;
   position: sticky;
@@ -132,7 +132,7 @@
 
   >details {
     border-radius: 5px;
-    border: 1px solid var(--fg-color);
+    background-color: var(--card-bg-color);
     margin: 5px;
     padding: 10px;
 
@@ -152,5 +152,15 @@ nav.TableOfContents {
 
   >ul {
     padding-left: 25px;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: inset 0 -1.5rem var(--post-a-color);
+      color: var(--fg-color);
+      transition: 0.5s;
+    }
   }
 }

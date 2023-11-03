@@ -1,13 +1,13 @@
 <li class="list-posts-item">
-  <a href="{{ .Permalink }}" class="no-decoration" aria-label="{{ .Title }}"></a>
-  <div class="list-title">{{ .Title }}</div>
-  <div class="list-meta">
-    <span>
+  <a href="{{ .Permalink }}" class="no-decoration list-posts-item-title">{{ .Title }}</a>
+  <div class="list-posts-item-meta">
+    <time>
       {{ partial "svg/calendar" . }}
-      <time>{{ .Date.Format "2006-01-02" }}</time>
-      {{ range (.GetTerms "tags") }}
-        &#035;{{ .LinkTitle }}
-      {{ end }}
-    </span>
+      {{ .Date.Format "2006-01-02" }}
+    </time>
+    {{ range (.GetTerms "tags") }}
+    <a href={{ .Permalink }} class="no-decoration list-posts-item-meta-tag">&#035;{{ .LinkTitle }}</a>
+    {{ end }}
   </div>
+  <a href={{ .Permalink }} class="list-posts-item-read">この記事を読む</a>
 </li>

@@ -5,12 +5,16 @@
 {{ define "main" }}
 {{ partial "breadcrumb" . }}
 <h1 id="page-title">{{ .Title }}</h1>
-<ul id="list-posts">
-  {{ range (where .Site.RegularPages "Type" "posts").GroupByDate "2006-01" }}
-    <h3>{{ .Key }}</h3>
+{{ range (where .Site.RegularPages "Type" "posts").GroupByDate "2006-01" }}
+<div class="archive-wrapper">
+  <h3 class="archive-date" id="{{ .Key }}">
+    <a href="#{{ .Key }}" class="no-decoration">{{ .Key }}</a>
+  </h3>
+  <ul class="archive-posts">
     {{ range .Pages }}
-      {{ partial "list-posts-item" . }}
+    {{ partial "list-posts-item" . }}
     {{ end }}
-  {{ end }}
-</ul>
+  </ul>
+</div>
+{{ end }}
 {{ end }}

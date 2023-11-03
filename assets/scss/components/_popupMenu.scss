@@ -3,13 +3,11 @@
   border: solid 1px var(--br-color);
   border-radius: 5px;
   box-shadow: 5px 5px 5px var(--br-color);
-  color: var(--fg-color);
   position: fixed;
   top: 3rem;
   right: 1rem;
 
   >a {
-    background-color: var(--bg-color);
     border-radius: 5px;
     display: block;
     padding: 5px;
@@ -17,7 +15,7 @@
 
     &:hover,
     &:focus-visible {
-      filter: invert(100%);
+      background-color: var(--card-bg-color-hover);
       transition: .5s;
     }
   }

@@ -12,13 +12,14 @@
   margin: 8px;
 
   >a {
-    background-color: #80808044;
+    background-color: var(--card-bg-color);
     border-radius: 5px;
     display: inline-block;
     padding: 5px 10px;
 
     &:hover {
-      background-color: #808080c9;
+      background-color: var(--card-bg-color-hover);
+      transition: 0.5s;
     }
   }
 }

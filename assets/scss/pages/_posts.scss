@@ -3,44 +3,52 @@
   list-style: none;
   max-width: 800px;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
   width: 100%;
 }
 
 .list-posts-item {
-  background-color: var(--bg-color);
-  border-radius: 5px;
-  border: 2px solid var(--br-color);
-  margin-bottom: 10px;
-  padding: 15px;
-  position: relative;
+  border-bottom: 1px solid var(--br-color);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 
-  &:hover {
-    filter: invert(100%);
-    transition: .5s;
-  }
-
-  &:active {
-    transform: scale(.98);
-    transition: .1s;
-  }
-
-  >.list-title {
-    font-size: 1.25em;
+  &-title {
+    font-size: 1.25rem;
     font-weight: 500;
-    margin-bottom: 5px;
+
+    &:hover {
+      text-decoration: underline 2px;
+    }
   }
 
-  >.list-meta {
-    font-size: 0.8em;
+  &-meta {
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+
+    >time {
+      margin-right: 5px;
+    }
+
+    &-tag {
+      background-color: var(--card-bg-color);
+      border-radius: 5px;
+      display: inline-block;
+      padding: 4px 10px;
+
+      &:hover {
+        background-color: var(--card-bg-color-hover);
+        transition: 0.5s;
+      }
+    }
   }
 
-  >a {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
+  &-read {
+    &:hover {
+      box-shadow: inset 0 -1.5rem var(--card-bg-color-hover);
+      text-decoration: none;
+      transition: 0.5s;
+    }
   }
 }
 
@@ -52,17 +60,14 @@
   max-width: 800px;
   width: 100%;
 
-  >#pagenation-next,
-  >#pagenation-prev {
-    background-color: var(--bg-color);
-    border: 2px solid var(--br-color);
+  &-next,
+  &-prev {
+    background-color: var(--card-bg-color);
     border-radius: 5px;
-    color: var(--fg-color);
-    padding: 5px 10px;
+    padding: 10px 15px;
 
     &:hover {
-      filter: invert(100%);
-      text-decoration: unset;
+      background-color: var(--card-bg-color-hover);
       transition: 0.5s;
     }
   }

@@ -4,17 +4,16 @@
   justify-content: space-between;
   margin: 2rem 0;
 
-  >#post-nav-next,
-  >#post-nav-prev {
+  &-next,
+  &-prev {
     display: flex;
     align-items: center;
     position: relative;
-    background-color: var(--bg-color);
-    border: 2px solid var(--br-color);
+    background-color: var(--card-bg-color);
     width: 50%;
 
     &:hover {
-      filter: invert(100%);
+      background-color: var(--card-bg-color-hover);
       transition: .5s;
     }
 
@@ -40,13 +39,13 @@
     }
   }
 
-  >#post-nav-next {
+  &-next {
     // 左側だけ丸くする
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
 
-  >#post-nav-prev {
+  &-prev {
     // 右側だけ丸くする
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
