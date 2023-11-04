@@ -10,20 +10,51 @@
 .list-posts-item {
   border-bottom: 1px solid var(--br-color);
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
+
+  &-wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: #8080804a;
+    }
+
+    &:hover {
+      &::before {
+        height: 100%;
+        transition: 0.5s;
+      }
+
+      .list-posts-item-read {
+        box-shadow: inset 0 -1.5rem var(--post-a-color);
+        color: var(--fg-color);
+        transition: 0.5s;
+      }
+    }
+  }
+
+  &-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   &-title {
     font-size: 1.25rem;
     font-weight: 500;
-
-    &:hover {
-      text-decoration: underline 2px;
-    }
   }
 
   &-meta {
     font-size: 0.9rem;
-    margin-top: 0.25rem;
     margin-bottom: 1rem;
 
     >time {
@@ -35,6 +66,7 @@
       border-radius: 5px;
       display: inline-block;
       padding: 4px 10px;
+      position: relative;
 
       &:hover {
         background-color: var(--card-bg-color-hover);
@@ -44,11 +76,8 @@
   }
 
   &-read {
-    &:hover {
-      box-shadow: inset 0 -1.5rem var(--card-bg-color-hover);
-      text-decoration: none;
-      transition: 0.5s;
-    }
+    color: var(--a-color);
+    font-weight: bold;
   }
 }
 
