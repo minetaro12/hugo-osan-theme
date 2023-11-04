@@ -27,6 +27,7 @@ searchInput.addEventListener("input", (e) => {
 searchInputClear.addEventListener("click", () => {
   searchInput.value = ""
   result.innerHTML = ""
+  searchInput.focus()
 })
 
 function search(keyword, data, result) {
