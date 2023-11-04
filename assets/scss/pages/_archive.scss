@@ -5,7 +5,6 @@
   }
 
   &-date {
-    text-wrap: nowrap;
     &:hover {
       text-decoration: underline 2px;
     }
@@ -14,6 +13,6 @@
   &-posts {
     list-style: none;
     padding: 0;
-    width: 100%;
+    flex: 1;
   }
 }
