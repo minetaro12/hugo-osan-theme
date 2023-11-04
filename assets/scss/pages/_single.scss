@@ -43,7 +43,7 @@
   line-height: 1.6;
   overflow: hidden;
 
-  :not(.gist >) a {
+  .post-content-link {
     color: var(--fg-color);
     box-shadow: inset 0px -3px var(--post-a-color);
     font-weight: unset;
@@ -58,14 +58,6 @@
   img {
     border-radius: 5px;
     max-width: 100%;
-  }
-
-  .img-link {
-    box-shadow: unset;
-
-    &:hover {
-      box-shadow: unset;
-    }
   }
 
   hr {
