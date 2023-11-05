@@ -1,6 +1,6 @@
 html {
+  --accent-color: #4699ff85;
   --a-color: #006aff;
-  --post-a-color: #477ce5;
   --bg-color: white;
   --card-bg-color: #80808044;
   --card-bg-color-hover: #808080c9;
@@ -11,7 +11,6 @@ html {
 /* Dark mode */
 html.Dark {
   --a-color: #0084ff;
-  --post-a-color: #647aa5;
   --bg-color: #171717;
   --fg-color: #cccccc;
 }

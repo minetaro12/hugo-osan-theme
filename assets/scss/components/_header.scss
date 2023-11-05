@@ -1,6 +1,6 @@
 header {
+  background-color: var(--accent-color);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--br-color);
   padding: 10px;
   position: sticky;
   top: 0;
@@ -22,6 +22,7 @@ header {
     }
 
     >#site-logo {
+      color: white;
       font-size: x-large;
       font-weight: bold;
       white-space: nowrap;
