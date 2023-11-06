@@ -1,7 +1,7 @@
 <div id="post-nav">
   {{ with .NextInSection }}
   <div id="post-nav-next">
-    <span class="post-nav-arrow">←</span>
+    <span class="post-nav-arrow">«</span>
     <span class="post-nav-title">{{ .Title }}</span>
     <a href="{{ .Permalink }}" class="no-decoration" aria-label="{{ .Title }}"></a>
   </div>
@@ -11,7 +11,7 @@
   <div id="post-nav-prev">
     <span class="post-nav-title">{{ .Title }}</span>
     <a href="{{ .Permalink }}" class="no-decoration" aria-label="{{ .Title }}"></a>
-    <span class="post-nav-arrow">→</span>
+    <span class="post-nav-arrow">»</span>
   </div>
   {{ end }}
 </div>
