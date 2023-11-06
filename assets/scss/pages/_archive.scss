@@ -2,11 +2,27 @@
   &-wrapper {
     display: flex;
     gap: 1rem;
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
   &-date {
-    &:hover {
-      text-decoration: underline 2px;
+    min-width: 70px;
+
+    @media screen and (max-width: 800px) {
+      background-color: var(--card-bg-color);
+      border-left: 10px solid var(--accent-color);
+      padding-left: 10px;
+      margin: 0.5rem 0;
+    }
+
+    >a {
+      &:hover {
+        text-decoration: underline 2px;
+      }
     }
   }
 
