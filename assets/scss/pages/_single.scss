@@ -97,15 +97,10 @@
   }
 }
 
-.headline-hash {
-  visibility: hidden;
+.headline-hash:hover {
+  text-decoration: underline 2px;
 }
 
-:has(> .headline-hash):hover {
-  .headline-hash {
-    visibility: visible;
-  }
-}
 
 #toc {
   background-color: var(--card-bg-color);

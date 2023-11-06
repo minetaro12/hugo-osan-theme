@@ -33,7 +33,7 @@
   <div id="wrapper">
     {{ partial "toc" . }}
     <article id="post-content">
-      {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" "${1}&nbsp;<a class=\"headline-hash\" href=\"#${2}\">#</a> ${3}" | safeHTML }}
+      {{ .Content | safeHTML }}
     </article>
   </div>
   {{ if .Params.comments }}
