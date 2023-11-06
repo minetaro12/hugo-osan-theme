@@ -37,7 +37,7 @@ layout: "archive"
 ---
 ```
 
-## 検索ページの作成(pagefindが必要です)
+## 検索ページの作成
 
 `content/search.md`
 
