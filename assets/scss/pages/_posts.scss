@@ -81,23 +81,57 @@
   }
 }
 
-#pagination {
+.pagination {
   display: flex;
-  justify-content: space-between;
-  margin: auto;
-  margin-bottom: 10px;
-  max-width: 800px;
-  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 
-  &-next,
-  &-prev {
-    background-color: var(--card-bg-color);
-    border-radius: 5px;
-    padding: 10px 15px;
+  >.page-item {
+    display: block;
+    margin-bottom: 5px;
 
-    &:hover {
-      background-color: var(--card-bg-color-hover);
-      transition: 0.5s;
+    >a {
+      background-color: var(--card-bg-color);
+      color: var(--fg-color);
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: var(--card-bg-color-hover);
+        transition: 0.5s;
+      }
+    }
+
+    // 現在のページのボタンの色を変える
+    &.active>a {
+      background-color: var(--accent-color);
+
+      &:hover {
+        background-color: var(--accent-color);
+      }
+    }
+
+    // 無効なボタンの色を変える
+    &.disabled>a {
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: var(--card-bg-color);
+      }
+    }
+
+    // 最初のボタンと最後のボタンの角を丸くする
+    &:first-child>a {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &:last-child>a {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
     }
   }
 }

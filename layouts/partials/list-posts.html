@@ -12,16 +12,4 @@
     {{ partial "list-posts-item" . }}
   {{ end }}
 </ul>
-<nav id="pagination">
-  {{ if .Paginator.HasPrev }}
-    {{ with .Paginator.Prev }}
-      <a id="pagination-prev" class="no-decoration" href="{{ .URL }}">{{ partial "svg/arrowLeft" . }}Newer</a>
-    {{ end }}
-  {{ end }}
-  <div id="pagination-separator"></div>
-  {{ if .Paginator.HasNext }}
-    {{ with .Paginator.Next }}
-      <a id="pagination-next" class="no-decoration" href="{{ .URL }}">Older{{ partial "svg/arrowRight" . }}</a>
-    {{ end }}
-  {{ end }}
-</nav>
+{{ template "_internal/pagination.html" . }}
