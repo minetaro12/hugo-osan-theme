@@ -64,6 +64,13 @@
       box-shadow: inset 0px -1.5rem var(--accent-color);
       transition: .5s;
     }
+
+    >.feather {
+      margin-left: 5px;
+      height: 0.8rem;
+      width: 0.8rem;
+      vertical-align: 0;
+    }
   }
 
   img {
