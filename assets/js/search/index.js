@@ -5,7 +5,7 @@ const searchInputClear = document.querySelector("#search-input-clear")
 // データを取得
 let data
 (async () => {
-  const res = await fetch("/index.json")
+  const res = await fetch("../index.json")
   // 読み込み中の表示
   result.textContent = "インデックスを読み込んでいます..."
   // 読み込み完了
