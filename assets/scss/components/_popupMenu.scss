@@ -1,22 +1,24 @@
 #popup-menu {
   background-color: var(--bg-color);
-  border: solid 1px var(--br-color);
+  border: solid 1px var(--card-bg-color);
   border-radius: 5px;
-  box-shadow: 5px 5px 5px var(--br-color);
+  padding: 8px 0;
   position: fixed;
   top: 3rem;
   right: 1rem;
 
   >a {
-    border-radius: 5px;
     display: block;
-    padding: 5px;
-    margin: 5px;
+    padding: 4px 16px;
 
     &:hover,
     &:focus-visible {
       background-color: var(--card-bg-color-hover);
       transition: .5s;
+    }
+
+    &:active {
+      background-color: var(--accent-color);
     }
   }
 
