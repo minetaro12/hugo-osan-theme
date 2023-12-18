@@ -1,0 +1,13 @@
+<div id="popup-menu" class="hide">
+  <div id="popup-menu-content">
+    {{ range .Site.Menus.header }}
+      {{ if eq .Params.newtab true }}
+        <a href="{{ .URL }}" target="_blank" class="no-decoration" rel="noopener noreferrer">
+          {{ .Name | safeHTML }}{{ partial "svg/externalLink" . }}
+        </a>
+      {{ else }}
+        <a href="{{ .URL }}" class="no-decoration">{{ .Name | safeHTML }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
