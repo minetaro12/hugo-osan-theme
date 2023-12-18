@@ -25,6 +25,7 @@
 
     &:hover {
       background-color: var(--card-bg-color-hover);
+      transition: 0.5s;
     }
   }
 }
