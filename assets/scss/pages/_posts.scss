@@ -116,6 +116,7 @@
 
     // 無効なボタンの色を変える
     &.disabled>a {
+      filter: opacity(0.3);
       cursor: not-allowed;
 
       &:hover {
