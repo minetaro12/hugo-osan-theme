@@ -1,5 +1,9 @@
 {{ if eq .IsHome false }}
-<h1 id="page-title">{{ .Title }}</h1>
+  {{ if eq .Kind "term" }}
+    <h1 id="page-title">&#035;{{ .Title }}</h1>
+  {{ else }}
+    <h1 id="page-title">{{ .Title }}</h1>
+  {{ end }}
 {{ end }}
 <ul id="list-posts">
   {{ $paginator := 0 }}
