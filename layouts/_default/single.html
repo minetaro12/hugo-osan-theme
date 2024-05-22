@@ -37,7 +37,7 @@
     </article>
   </div>
   {{ if .Params.comments }}
-    {{ if $.Site.IsServer }}
+    {{ if hugo.IsServer }}
       <p>プレビューではコメントが非表示なります</p>
     {{ else }}
       {{ partial "comments" . }}
