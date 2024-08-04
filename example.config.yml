@@ -4,6 +4,7 @@ title: My New Site
 theme: hugo-osan-theme
 copyright: "&copy; 2022 yourname"
 paginate: 10
+enableGitInfo: true
 
 menu:
   header:
