@@ -26,6 +26,9 @@ header {
       font-size: x-large;
       font-weight: bold;
       white-space: nowrap;
+      &:hover {
+        text-decoration: var(--fg-color) underline;
+      }
     }
   }
 }
