@@ -1,7 +1,7 @@
 header {
   background-color: var(--accent-color);
   backdrop-filter: blur(10px);
-  padding: 10px;
+  padding: 10px 15px;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -21,13 +21,13 @@ header {
       display: none;
     }
 
-    >#site-logo {
+    >#site-logo>a {
       color: white;
       font-size: x-large;
       font-weight: bold;
       white-space: nowrap;
       &:hover {
-        text-decoration: var(--fg-color) underline;
+        text-decoration: white underline;
       }
     }
   }
