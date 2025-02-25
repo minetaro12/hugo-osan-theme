@@ -3,12 +3,12 @@ export default () => {
   const popupMenu = document.querySelector("#popup-menu")
 
   menuButton.addEventListener("click", () => {
-    popupMenu.classList.toggle("hide")
+    popupMenu.classList.toggle("open")
   })
 
   popupMenu.addEventListener("click", (event) => {
     if (event.target.closest("#popup-menu-content") == null) {
-      popupMenu.classList.add("hide")
+      popupMenu.classList.remove("open")
     }
   })
 }
