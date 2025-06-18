@@ -1,25 +1,33 @@
 #popup-menu {
-  background-color: #00000075;
-  display: flex;
-  flex-direction: row-reverse;
+  backdrop-filter: brightness(1);
+  transition: backdrop-filter 0.2s;
+
   position: fixed;
   inset: 0;
   z-index: 11;
-  transform: translateX(100%);
-  transition: transform 0.25s;
+  pointer-events: none;
 }
 
 #popup-menu.open {
-  transform: translateY(0);
-  transition: transform 0.25s;
+  backdrop-filter: brightness(0.5);
+  transition: backdrop-filter 0.2s;
+  pointer-events: all;
 }
 
 #popup-menu-content {
   background-color: var(--bg-color);
-  box-shadow: -3px 0 10px #0000009a;
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   padding: 40px 0;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+
+  transform: translateX(100%);
+  transition: transform 0.2s;
 
   >a {
     display: block;
@@ -32,4 +40,10 @@
       transition: 0.5s;
     }
   }
+}
+
+#popup-menu.open #popup-menu-content {
+  box-shadow: -3px 0 10px #0000009a;
+  transform: translateX(0);
+  transition: transform 0.2s;
 }
